@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FF96E2F9F446AC6D5D96E60 /* libPods-WQBaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D83C88D71E647166B0F27 /* libPods-WQBaseDemo.a */; };
+		DE0A01631ED2BE490054DD17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01621ED2BE490054DD17 /* main.m */; };
+		DE0A01661ED2BE490054DD17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01651ED2BE490054DD17 /* AppDelegate.m */; };
+		DE0A01691ED2BE490054DD17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01681ED2BE490054DD17 /* ViewController.m */; };
+		DE0A016C1ED2BE490054DD17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0A016A1ED2BE490054DD17 /* Main.storyboard */; };
+		DE0A016F1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE0A016D1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld */; };
+		DE0A01711ED2BE490054DD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0A01701ED2BE490054DD17 /* Assets.xcassets */; };
+		DE0A01741ED2BE490054DD17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0A01721ED2BE490054DD17 /* LaunchScreen.storyboard */; };
+		DE0A01DD1ED2BEDA0054DD17 /* NSDate+WQFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A017F1ED2BEDA0054DD17 /* NSDate+WQFormat.m */; };
+		DE0A01DE1ED2BEDA0054DD17 /* NSDate+WQHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01811ED2BEDA0054DD17 /* NSDate+WQHandle.m */; };
+		DE0A01DF1ED2BEDA0054DD17 /* NSDate+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01831ED2BEDA0054DD17 /* NSDate+WQHelp.m */; };
+		DE0A01E01ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01851ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m */; };
+		DE0A01E11ED2BEDA0054DD17 /* NSString+WQDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01871ED2BEDA0054DD17 /* NSString+WQDate.m */; };
+		DE0A01E21ED2BEDA0054DD17 /* NSString+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01891ED2BEDA0054DD17 /* NSString+WQHelp.m */; };
+		DE0A01E31ED2BEDA0054DD17 /* WQDateFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A018B1ED2BEDA0054DD17 /* WQDateFormater.m */; };
+		DE0A01E41ED2BEDA0054DD17 /* NSFileManager+WQPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */; };
+		DE0A01E51ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01911ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m */; };
+		DE0A01E61ED2BEDA0054DD17 /* UIImage+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01931ED2BEDA0054DD17 /* UIImage+WQHelp.m */; };
+		DE0A01E71ED2BEDA0054DD17 /* UIImageView+WQAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01951ED2BEDA0054DD17 /* UIImageView+WQAnimation.m */; };
+		DE0A01E81ED2BEDA0054DD17 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01981ED2BEDA0054DD17 /* NSDate+Utilities.m */; };
+		DE0A01E91ED2BEDA0054DD17 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A019A1ED2BEDA0054DD17 /* UIBarButtonItem+Badge.m */; };
+		DE0A01EA1ED2BEDA0054DD17 /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A019C1ED2BEDA0054DD17 /* UIButton+countDown.m */; };
+		DE0A01EB1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A019E1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m */; };
+		DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */; };
+		DE0A01ED1ED2BEDA0054DD17 /* WQError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A41ED2BEDA0054DD17 /* WQError.m */; };
+		DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */; };
+		DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */; };
+		DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */; };
+		DE0A01F11ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */; };
+		DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */; };
+		DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */; };
+		DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */; };
+		DE0A01F51ED2BEDA0054DD17 /* WQPayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B81ED2BEDA0054DD17 /* WQPayItem.m */; };
+		DE0A01F61ED2BEDA0054DD17 /* WQPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01BA1ED2BEDA0054DD17 /* WQPayTool.m */; };
+		DE0A01FA1ED2BEDA0054DD17 /* WQVoiceCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01C61ED2BEDA0054DD17 /* WQVoiceCache.m */; };
+		DE0A01FB1ED2BEDA0054DD17 /* WQVoiceDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01C81ED2BEDA0054DD17 /* WQVoiceDownloader.m */; };
+		DE0A01FC1ED2BEDA0054DD17 /* WQVoiceDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01CA1ED2BEDA0054DD17 /* WQVoiceDownloadOperation.m */; };
+		DE0A01FD1ED2BEDA0054DD17 /* WQVoicePlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01CC1ED2BEDA0054DD17 /* WQVoicePlayManager.m */; };
+		DE0A01FE1ED2BEDA0054DD17 /* WQVoiceRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01CE1ED2BEDA0054DD17 /* WQVoiceRecordManager.m */; };
+		DE0A01FF1ED2BEDA0054DD17 /* WQStarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */; };
+		DE0A02001ED2BEDA0054DD17 /* WQStarLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */; };
+		DE0A02011ED2BEDA0054DD17 /* WQEdgeTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */; };
+		DE0A02021ED2BEDA0054DD17 /* WQStepNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */; };
+		DE0A02031ED2BEDA0054DD17 /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */; };
+		DE0A020E1ED2BF970054DD17 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A02071ED2BF970054DD17 /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE0A020F1ED2BF970054DD17 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A020C1ED2BF970054DD17 /* libopencore-amrnb.a */; };
+		DE0A02101ED2BF970054DD17 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A020D1ED2BF970054DD17 /* libopencore-amrwb.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CD1B01262C366C99BF48CAB /* Pods-WQBaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D23D83C88D71E647166B0F27 /* libPods-WQBaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WQBaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0A015E1ED2BE490054DD17 /* WQBaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQBaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0A01621ED2BE490054DD17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE0A01641ED2BE490054DD17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE0A01651ED2BE490054DD17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE0A01671ED2BE490054DD17 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE0A01681ED2BE490054DD17 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE0A016B1ED2BE490054DD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE0A016E1ED2BE490054DD17 /* WQBaseDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WQBaseDemo.xcdatamodel; sourceTree = "<group>"; };
+		DE0A01701ED2BE490054DD17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE0A01731ED2BE490054DD17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE0A01751ED2BE490054DD17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0A017E1ED2BEDA0054DD17 /* NSDate+WQFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQFormat.h"; sourceTree = "<group>"; };
+		DE0A017F1ED2BEDA0054DD17 /* NSDate+WQFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQFormat.m"; sourceTree = "<group>"; };
+		DE0A01801ED2BEDA0054DD17 /* NSDate+WQHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQHandle.h"; sourceTree = "<group>"; };
+		DE0A01811ED2BEDA0054DD17 /* NSDate+WQHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQHandle.m"; sourceTree = "<group>"; };
+		DE0A01821ED2BEDA0054DD17 /* NSDate+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQHelp.h"; sourceTree = "<group>"; };
+		DE0A01831ED2BEDA0054DD17 /* NSDate+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQHelp.m"; sourceTree = "<group>"; };
+		DE0A01841ED2BEDA0054DD17 /* NSString+WQBridgeFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQBridgeFormat.h"; sourceTree = "<group>"; };
+		DE0A01851ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQBridgeFormat.m"; sourceTree = "<group>"; };
+		DE0A01861ED2BEDA0054DD17 /* NSString+WQDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQDate.h"; sourceTree = "<group>"; };
+		DE0A01871ED2BEDA0054DD17 /* NSString+WQDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQDate.m"; sourceTree = "<group>"; };
+		DE0A01881ED2BEDA0054DD17 /* NSString+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQHelp.h"; sourceTree = "<group>"; };
+		DE0A01891ED2BEDA0054DD17 /* NSString+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQHelp.m"; sourceTree = "<group>"; };
+		DE0A018A1ED2BEDA0054DD17 /* WQDateFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDateFormater.h; sourceTree = "<group>"; };
+		DE0A018B1ED2BEDA0054DD17 /* WQDateFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDateFormater.m; sourceTree = "<group>"; };
+		DE0A018D1ED2BEDA0054DD17 /* NSFileManager+WQPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+WQPath.h"; sourceTree = "<group>"; };
+		DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+WQPath.m"; sourceTree = "<group>"; };
+		DE0A01901ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WQInitHelp.h"; sourceTree = "<group>"; };
+		DE0A01911ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WQInitHelp.m"; sourceTree = "<group>"; };
+		DE0A01921ED2BEDA0054DD17 /* UIImage+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WQHelp.h"; sourceTree = "<group>"; };
+		DE0A01931ED2BEDA0054DD17 /* UIImage+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WQHelp.m"; sourceTree = "<group>"; };
+		DE0A01941ED2BEDA0054DD17 /* UIImageView+WQAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQAnimation.h"; sourceTree = "<group>"; };
+		DE0A01951ED2BEDA0054DD17 /* UIImageView+WQAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQAnimation.m"; sourceTree = "<group>"; };
+		DE0A01971ED2BEDA0054DD17 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		DE0A01981ED2BEDA0054DD17 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		DE0A01991ED2BEDA0054DD17 /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		DE0A019A1ED2BEDA0054DD17 /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
+		DE0A019B1ED2BEDA0054DD17 /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
+		DE0A019C1ED2BEDA0054DD17 /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
+		DE0A019D1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
+		DE0A019E1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
+		DE0A01A11ED2BEDA0054DD17 /* WQDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDynamicObject.h; sourceTree = "<group>"; };
+		DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDynamicObject.m; sourceTree = "<group>"; };
+		DE0A01A31ED2BEDA0054DD17 /* WQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQError.h; sourceTree = "<group>"; };
+		DE0A01A41ED2BEDA0054DD17 /* WQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQError.m; sourceTree = "<group>"; };
+		DE0A01A61ED2BEDA0054DD17 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
+		DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
+		DE0A01A81ED2BEDA0054DD17 /* WQAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAppInfo.h; sourceTree = "<group>"; };
+		DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAppInfo.m; sourceTree = "<group>"; };
+		DE0A01AA1ED2BEDA0054DD17 /* WQCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCache.h; sourceTree = "<group>"; };
+		DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCache.m; sourceTree = "<group>"; };
+		DE0A01AD1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQKeyboardAdjustHelp.h; sourceTree = "<group>"; };
+		DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQKeyboardAdjustHelp.m; sourceTree = "<group>"; };
+		DE0A01B01ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQSDWebImage.h"; sourceTree = "<group>"; };
+		DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQSDWebImage.m"; sourceTree = "<group>"; };
+		DE0A01B21ED2BEDA0054DD17 /* WQBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBaseAPI.h; sourceTree = "<group>"; };
+		DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBaseAPI.m; sourceTree = "<group>"; };
+		DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHttpTool.h; sourceTree = "<group>"; };
+		DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHttpTool.m; sourceTree = "<group>"; };
+		DE0A01B71ED2BEDA0054DD17 /* WQPayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPayItem.h; sourceTree = "<group>"; };
+		DE0A01B81ED2BEDA0054DD17 /* WQPayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPayItem.m; sourceTree = "<group>"; };
+		DE0A01B91ED2BEDA0054DD17 /* WQPayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPayTool.h; sourceTree = "<group>"; };
+		DE0A01BA1ED2BEDA0054DD17 /* WQPayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPayTool.m; sourceTree = "<group>"; };
+		DE0A01C51ED2BEDA0054DD17 /* WQVoiceCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceCache.h; sourceTree = "<group>"; };
+		DE0A01C61ED2BEDA0054DD17 /* WQVoiceCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceCache.m; sourceTree = "<group>"; };
+		DE0A01C71ED2BEDA0054DD17 /* WQVoiceDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceDownloader.h; sourceTree = "<group>"; };
+		DE0A01C81ED2BEDA0054DD17 /* WQVoiceDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceDownloader.m; sourceTree = "<group>"; };
+		DE0A01C91ED2BEDA0054DD17 /* WQVoiceDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceDownloadOperation.h; sourceTree = "<group>"; };
+		DE0A01CA1ED2BEDA0054DD17 /* WQVoiceDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceDownloadOperation.m; sourceTree = "<group>"; };
+		DE0A01CB1ED2BEDA0054DD17 /* WQVoicePlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoicePlayManager.h; sourceTree = "<group>"; };
+		DE0A01CC1ED2BEDA0054DD17 /* WQVoicePlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoicePlayManager.m; sourceTree = "<group>"; };
+		DE0A01CD1ED2BEDA0054DD17 /* WQVoiceRecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQVoiceRecordManager.h; sourceTree = "<group>"; };
+		DE0A01CE1ED2BEDA0054DD17 /* WQVoiceRecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQVoiceRecordManager.m; sourceTree = "<group>"; };
+		DE0A01D11ED2BEDA0054DD17 /* WQStarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarContainerView.h; sourceTree = "<group>"; };
+		DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarContainerView.m; sourceTree = "<group>"; };
+		DE0A01D31ED2BEDA0054DD17 /* WQStarLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarLevel.h; sourceTree = "<group>"; };
+		DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarLevel.m; sourceTree = "<group>"; };
+		DE0A01D61ED2BEDA0054DD17 /* WQEdgeTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEdgeTitleButton.h; sourceTree = "<group>"; };
+		DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEdgeTitleButton.m; sourceTree = "<group>"; };
+		DE0A01D81ED2BEDA0054DD17 /* WQStepNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStepNumberView.h; sourceTree = "<group>"; };
+		DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStepNumberView.m; sourceTree = "<group>"; };
+		DE0A01DA1ED2BEDA0054DD17 /* WQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTextView.h; sourceTree = "<group>"; };
+		DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTextView.m; sourceTree = "<group>"; };
+		DE0A01DC1ED2BEDA0054DD17 /* WQBasicComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBasicComponents.h; sourceTree = "<group>"; };
+		DE0A02041ED2BEEF0054DD17 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DE0A02061ED2BF970054DD17 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		DE0A02071ED2BF970054DD17 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		DE0A02081ED2BF970054DD17 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		DE0A02091ED2BF970054DD17 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		DE0A020A1ED2BF970054DD17 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		DE0A020B1ED2BF970054DD17 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		DE0A020C1ED2BF970054DD17 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		DE0A020D1ED2BF970054DD17 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE0A015B1ED2BE490054DD17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF96E2F9F446AC6D5D96E60 /* libPods-WQBaseDemo.a in Frameworks */,
+				DE0A02101ED2BF970054DD17 /* libopencore-amrwb.a in Frameworks */,
+				DE0A020F1ED2BF970054DD17 /* libopencore-amrnb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66985148222F364367323261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D23D83C88D71E647166B0F27 /* libPods-WQBaseDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B54EF62E1FE9789C6B43DC48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */,
+				1CD1B01262C366C99BF48CAB /* Pods-WQBaseDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE0A01551ED2BE490054DD17 = {
+			isa = PBXGroup;
+			children = (
+				DE0A017B1ED2BEDA0054DD17 /* WQBasicComponents */,
+				DE0A01601ED2BE490054DD17 /* WQBaseDemo */,
+				DE0A015F1ED2BE490054DD17 /* Products */,
+				B54EF62E1FE9789C6B43DC48 /* Pods */,
+				66985148222F364367323261 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE0A015F1ED2BE490054DD17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A015E1ED2BE490054DD17 /* WQBaseDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE0A01601ED2BE490054DD17 /* WQBaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01641ED2BE490054DD17 /* AppDelegate.h */,
+				DE0A01651ED2BE490054DD17 /* AppDelegate.m */,
+				DE0A01671ED2BE490054DD17 /* ViewController.h */,
+				DE0A01681ED2BE490054DD17 /* ViewController.m */,
+				DE0A016A1ED2BE490054DD17 /* Main.storyboard */,
+				DE0A01701ED2BE490054DD17 /* Assets.xcassets */,
+				DE0A01721ED2BE490054DD17 /* LaunchScreen.storyboard */,
+				DE0A01751ED2BE490054DD17 /* Info.plist */,
+				DE0A016D1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld */,
+				DE0A01611ED2BE490054DD17 /* Supporting Files */,
+			);
+			path = WQBaseDemo;
+			sourceTree = "<group>";
+		};
+		DE0A01611ED2BE490054DD17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01621ED2BE490054DD17 /* main.m */,
+				DE0A02041ED2BEEF0054DD17 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE0A017B1ED2BEDA0054DD17 /* WQBasicComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A017C1ED2BEDA0054DD17 /* Category */,
+				DE0A019F1ED2BEDA0054DD17 /* Tool */,
+				DE0A01CF1ED2BEDA0054DD17 /* UICustom */,
+				DE0A01DC1ED2BEDA0054DD17 /* WQBasicComponents.h */,
+			);
+			path = WQBasicComponents;
+			sourceTree = "<group>";
+		};
+		DE0A017C1ED2BEDA0054DD17 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A017D1ED2BEDA0054DD17 /* Category_Date */,
+				DE0A018C1ED2BEDA0054DD17 /* Category_Foundation */,
+				DE0A018F1ED2BEDA0054DD17 /* Category_UIKit */,
+				DE0A01961ED2BEDA0054DD17 /* Category_Vendor */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DE0A017D1ED2BEDA0054DD17 /* Category_Date */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A017E1ED2BEDA0054DD17 /* NSDate+WQFormat.h */,
+				DE0A017F1ED2BEDA0054DD17 /* NSDate+WQFormat.m */,
+				DE0A01801ED2BEDA0054DD17 /* NSDate+WQHandle.h */,
+				DE0A01811ED2BEDA0054DD17 /* NSDate+WQHandle.m */,
+				DE0A01821ED2BEDA0054DD17 /* NSDate+WQHelp.h */,
+				DE0A01831ED2BEDA0054DD17 /* NSDate+WQHelp.m */,
+				DE0A01841ED2BEDA0054DD17 /* NSString+WQBridgeFormat.h */,
+				DE0A01851ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m */,
+				DE0A01861ED2BEDA0054DD17 /* NSString+WQDate.h */,
+				DE0A01871ED2BEDA0054DD17 /* NSString+WQDate.m */,
+				DE0A01881ED2BEDA0054DD17 /* NSString+WQHelp.h */,
+				DE0A01891ED2BEDA0054DD17 /* NSString+WQHelp.m */,
+				DE0A018A1ED2BEDA0054DD17 /* WQDateFormater.h */,
+				DE0A018B1ED2BEDA0054DD17 /* WQDateFormater.m */,
+			);
+			path = Category_Date;
+			sourceTree = "<group>";
+		};
+		DE0A018C1ED2BEDA0054DD17 /* Category_Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A018D1ED2BEDA0054DD17 /* NSFileManager+WQPath.h */,
+				DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */,
+			);
+			path = Category_Foundation;
+			sourceTree = "<group>";
+		};
+		DE0A018F1ED2BEDA0054DD17 /* Category_UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01901ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.h */,
+				DE0A01911ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m */,
+				DE0A01921ED2BEDA0054DD17 /* UIImage+WQHelp.h */,
+				DE0A01931ED2BEDA0054DD17 /* UIImage+WQHelp.m */,
+				DE0A01941ED2BEDA0054DD17 /* UIImageView+WQAnimation.h */,
+				DE0A01951ED2BEDA0054DD17 /* UIImageView+WQAnimation.m */,
+			);
+			path = Category_UIKit;
+			sourceTree = "<group>";
+		};
+		DE0A01961ED2BEDA0054DD17 /* Category_Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01971ED2BEDA0054DD17 /* NSDate+Utilities.h */,
+				DE0A01981ED2BEDA0054DD17 /* NSDate+Utilities.m */,
+				DE0A01991ED2BEDA0054DD17 /* UIBarButtonItem+Badge.h */,
+				DE0A019A1ED2BEDA0054DD17 /* UIBarButtonItem+Badge.m */,
+				DE0A019B1ED2BEDA0054DD17 /* UIButton+countDown.h */,
+				DE0A019C1ED2BEDA0054DD17 /* UIButton+countDown.m */,
+				DE0A019D1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.h */,
+				DE0A019E1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m */,
+			);
+			path = Category_Vendor;
+			sourceTree = "<group>";
+		};
+		DE0A019F1ED2BEDA0054DD17 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01A01ED2BEDA0054DD17 /* BasicFoundation */,
+				DE0A01A51ED2BEDA0054DD17 /* BasicHelp */,
+				DE0A01AC1ED2BEDA0054DD17 /* FunctionHelp */,
+				DE0A01AF1ED2BEDA0054DD17 /* NetWorkTool */,
+				DE0A01B61ED2BEDA0054DD17 /* PayTool */,
+				DE0A01BB1ED2BEDA0054DD17 /* VoiceTool */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DE0A01A01ED2BEDA0054DD17 /* BasicFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01A11ED2BEDA0054DD17 /* WQDynamicObject.h */,
+				DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */,
+				DE0A01A31ED2BEDA0054DD17 /* WQError.h */,
+				DE0A01A41ED2BEDA0054DD17 /* WQError.m */,
+			);
+			path = BasicFoundation;
+			sourceTree = "<group>";
+		};
+		DE0A01A51ED2BEDA0054DD17 /* BasicHelp */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01A61ED2BEDA0054DD17 /* RuntimeKit.h */,
+				DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */,
+				DE0A01A81ED2BEDA0054DD17 /* WQAppInfo.h */,
+				DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */,
+				DE0A01AA1ED2BEDA0054DD17 /* WQCache.h */,
+				DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */,
+			);
+			path = BasicHelp;
+			sourceTree = "<group>";
+		};
+		DE0A01AC1ED2BEDA0054DD17 /* FunctionHelp */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01AD1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.h */,
+				DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */,
+			);
+			path = FunctionHelp;
+			sourceTree = "<group>";
+		};
+		DE0A01AF1ED2BEDA0054DD17 /* NetWorkTool */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01B01ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.h */,
+				DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */,
+				DE0A01B21ED2BEDA0054DD17 /* WQBaseAPI.h */,
+				DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */,
+				DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */,
+				DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */,
+			);
+			path = NetWorkTool;
+			sourceTree = "<group>";
+		};
+		DE0A01B61ED2BEDA0054DD17 /* PayTool */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01B71ED2BEDA0054DD17 /* WQPayItem.h */,
+				DE0A01B81ED2BEDA0054DD17 /* WQPayItem.m */,
+				DE0A01B91ED2BEDA0054DD17 /* WQPayTool.h */,
+				DE0A01BA1ED2BEDA0054DD17 /* WQPayTool.m */,
+			);
+			path = PayTool;
+			sourceTree = "<group>";
+		};
+		DE0A01BB1ED2BEDA0054DD17 /* VoiceTool */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A02051ED2BF970054DD17 /* amrwapper */,
+				DE0A01C51ED2BEDA0054DD17 /* WQVoiceCache.h */,
+				DE0A01C61ED2BEDA0054DD17 /* WQVoiceCache.m */,
+				DE0A01C71ED2BEDA0054DD17 /* WQVoiceDownloader.h */,
+				DE0A01C81ED2BEDA0054DD17 /* WQVoiceDownloader.m */,
+				DE0A01C91ED2BEDA0054DD17 /* WQVoiceDownloadOperation.h */,
+				DE0A01CA1ED2BEDA0054DD17 /* WQVoiceDownloadOperation.m */,
+				DE0A01CB1ED2BEDA0054DD17 /* WQVoicePlayManager.h */,
+				DE0A01CC1ED2BEDA0054DD17 /* WQVoicePlayManager.m */,
+				DE0A01CD1ED2BEDA0054DD17 /* WQVoiceRecordManager.h */,
+				DE0A01CE1ED2BEDA0054DD17 /* WQVoiceRecordManager.m */,
+			);
+			path = VoiceTool;
+			sourceTree = "<group>";
+		};
+		DE0A01CF1ED2BEDA0054DD17 /* UICustom */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01D01ED2BEDA0054DD17 /* StarView */,
+				DE0A01D51ED2BEDA0054DD17 /* ViewCustom */,
+			);
+			path = UICustom;
+			sourceTree = "<group>";
+		};
+		DE0A01D01ED2BEDA0054DD17 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01D11ED2BEDA0054DD17 /* WQStarContainerView.h */,
+				DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */,
+				DE0A01D31ED2BEDA0054DD17 /* WQStarLevel.h */,
+				DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */,
+			);
+			path = StarView;
+			sourceTree = "<group>";
+		};
+		DE0A01D51ED2BEDA0054DD17 /* ViewCustom */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A01D61ED2BEDA0054DD17 /* WQEdgeTitleButton.h */,
+				DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */,
+				DE0A01D81ED2BEDA0054DD17 /* WQStepNumberView.h */,
+				DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */,
+				DE0A01DA1ED2BEDA0054DD17 /* WQTextView.h */,
+				DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */,
+			);
+			path = ViewCustom;
+			sourceTree = "<group>";
+		};
+		DE0A02051ED2BF970054DD17 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A02061ED2BF970054DD17 /* amrFileCodec.h */,
+				DE0A02071ED2BF970054DD17 /* amrFileCodec.m */,
+				DE0A02081ED2BF970054DD17 /* dec_if.h */,
+				DE0A02091ED2BF970054DD17 /* if_rom.h */,
+				DE0A020A1ED2BF970054DD17 /* interf_dec.h */,
+				DE0A020B1ED2BF970054DD17 /* interf_enc.h */,
+				DE0A020C1ED2BF970054DD17 /* libopencore-amrnb.a */,
+				DE0A020D1ED2BF970054DD17 /* libopencore-amrwb.a */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE0A015D1ED2BE490054DD17 /* WQBaseDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE0A01781ED2BE490054DD17 /* Build configuration list for PBXNativeTarget "WQBaseDemo" */;
+			buildPhases = (
+				56A962562578A7B93C6DFC3E /* [CP] Check Pods Manifest.lock */,
+				DE0A015A1ED2BE490054DD17 /* Sources */,
+				DE0A015B1ED2BE490054DD17 /* Frameworks */,
+				DE0A015C1ED2BE490054DD17 /* Resources */,
+				BEB57C41512BB2A6A5D8FA01 /* [CP] Embed Pods Frameworks */,
+				35AE41950F9B98E2162BA913 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WQBaseDemo;
+			productName = WQBaseDemo;
+			productReference = DE0A015E1ED2BE490054DD17 /* WQBaseDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE0A01561ED2BE490054DD17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = WQMapKit;
+				TargetAttributes = {
+					DE0A015D1ED2BE490054DD17 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE0A01591ED2BE490054DD17 /* Build configuration list for PBXProject "WQBaseDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE0A01551ED2BE490054DD17;
+			productRefGroup = DE0A015F1ED2BE490054DD17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE0A015D1ED2BE490054DD17 /* WQBaseDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE0A015C1ED2BE490054DD17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0A01741ED2BE490054DD17 /* LaunchScreen.storyboard in Resources */,
+				DE0A01711ED2BE490054DD17 /* Assets.xcassets in Resources */,
+				DE0A016C1ED2BE490054DD17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35AE41950F9B98E2162BA913 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56A962562578A7B93C6DFC3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB57C41512BB2A6A5D8FA01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE0A015A1ED2BE490054DD17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */,
+				DE0A01FD1ED2BEDA0054DD17 /* WQVoicePlayManager.m in Sources */,
+				DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */,
+				DE0A01E21ED2BEDA0054DD17 /* NSString+WQHelp.m in Sources */,
+				DE0A01E41ED2BEDA0054DD17 /* NSFileManager+WQPath.m in Sources */,
+				DE0A01FF1ED2BEDA0054DD17 /* WQStarContainerView.m in Sources */,
+				DE0A01E51ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m in Sources */,
+				DE0A01ED1ED2BEDA0054DD17 /* WQError.m in Sources */,
+				DE0A01E81ED2BEDA0054DD17 /* NSDate+Utilities.m in Sources */,
+				DE0A01691ED2BE490054DD17 /* ViewController.m in Sources */,
+				DE0A02031ED2BEDA0054DD17 /* WQTextView.m in Sources */,
+				DE0A02011ED2BEDA0054DD17 /* WQEdgeTitleButton.m in Sources */,
+				DE0A01E71ED2BEDA0054DD17 /* UIImageView+WQAnimation.m in Sources */,
+				DE0A01E61ED2BEDA0054DD17 /* UIImage+WQHelp.m in Sources */,
+				DE0A01DD1ED2BEDA0054DD17 /* NSDate+WQFormat.m in Sources */,
+				DE0A01F11ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m in Sources */,
+				DE0A01FC1ED2BEDA0054DD17 /* WQVoiceDownloadOperation.m in Sources */,
+				DE0A01FB1ED2BEDA0054DD17 /* WQVoiceDownloader.m in Sources */,
+				DE0A01661ED2BE490054DD17 /* AppDelegate.m in Sources */,
+				DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */,
+				DE0A01EA1ED2BEDA0054DD17 /* UIButton+countDown.m in Sources */,
+				DE0A01DF1ED2BEDA0054DD17 /* NSDate+WQHelp.m in Sources */,
+				DE0A01E11ED2BEDA0054DD17 /* NSString+WQDate.m in Sources */,
+				DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */,
+				DE0A01E91ED2BEDA0054DD17 /* UIBarButtonItem+Badge.m in Sources */,
+				DE0A01F51ED2BEDA0054DD17 /* WQPayItem.m in Sources */,
+				DE0A01EB1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m in Sources */,
+				DE0A01E31ED2BEDA0054DD17 /* WQDateFormater.m in Sources */,
+				DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */,
+				DE0A02001ED2BEDA0054DD17 /* WQStarLevel.m in Sources */,
+				DE0A01631ED2BE490054DD17 /* main.m in Sources */,
+				DE0A01F61ED2BEDA0054DD17 /* WQPayTool.m in Sources */,
+				DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */,
+				DE0A020E1ED2BF970054DD17 /* amrFileCodec.m in Sources */,
+				DE0A01FA1ED2BEDA0054DD17 /* WQVoiceCache.m in Sources */,
+				DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */,
+				DE0A01E01ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m in Sources */,
+				DE0A01FE1ED2BEDA0054DD17 /* WQVoiceRecordManager.m in Sources */,
+				DE0A02021ED2BEDA0054DD17 /* WQStepNumberView.m in Sources */,
+				DE0A01DE1ED2BEDA0054DD17 /* NSDate+WQHandle.m in Sources */,
+				DE0A016F1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE0A016A1ED2BE490054DD17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0A016B1ED2BE490054DD17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE0A01721ED2BE490054DD17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0A01731ED2BE490054DD17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE0A01761ED2BE490054DD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE0A01771ED2BE490054DD17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE0A01791ED2BE490054DD17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = WQBaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WQBasicComponents/Tool/VoiceTool/amrwapper",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WQ.WQBaseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE0A017A1ED2BE490054DD17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD1B01262C366C99BF48CAB /* Pods-WQBaseDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = WQBaseDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WQBasicComponents/Tool/VoiceTool/amrwapper",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WQ.WQBaseDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE0A01591ED2BE490054DD17 /* Build configuration list for PBXProject "WQBaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE0A01761ED2BE490054DD17 /* Debug */,
+				DE0A01771ED2BE490054DD17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE0A01781ED2BE490054DD17 /* Build configuration list for PBXNativeTarget "WQBaseDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE0A01791ED2BE490054DD17 /* Debug */,
+				DE0A017A1ED2BE490054DD17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE0A016D1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE0A016E1ED2BE490054DD17 /* WQBaseDemo.xcdatamodel */,
+			);
+			currentVersion = DE0A016E1ED2BE490054DD17 /* WQBaseDemo.xcdatamodel */;
+			path = WQBaseDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE0A01561ED2BE490054DD17 /* Project object */;
+}

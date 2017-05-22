@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "基础组件"
 
   s.description  = <<-DESC
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
 
   s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
   s.source_files  = "WQBasicComponents/WQBasicComponents.h"
-
+  s.user_target_xcconfig =  { "HEADER_SEARCH_PATHS" => '"$(SRCROOT)/WQBasicComponents/PaySDK"' }
   s.subspec 'Category' do |ss|
     ss.subspec 'Category_Vendor' do |sss|
       sss.source_files = 'WQBasicComponents/Category/Category_Vendor/*.{h,m}'
@@ -59,9 +59,21 @@ Pod::Spec.new do |s|
     end 
   end
 
+  s.subspec 'WQPaySDK' do |ss|
+   ss.vendored_libraries = "WQBasicComponents/PaySDK/WeiXinSdk/libWeChatSDK.a" ,"WQBasicComponents/PaySDK/alipaySdk/libcrypto.a","WQBasicComponents/PaySDK/alipaySdk/libssl.a"
+   ss.source_files ="WQBasicComponents/PaySDK/**/*.{h,m}"
+   ss.vendored_frameworks = 'WQBasicComponents/PaySDK/alipaySdk/AlipaySDK.framework'
+   ss.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','CFNetwork','CoreMotion'
+   ss.libraries = "c++", "z","sqlite3",
+   # ss.vendored_libraries = "WQBasicComponents/PaySDK/**/*.a"
+   # ss.vendored_libraries = "WQBasicComponents/PaySDK/WeiXinSdk/libWeChatSDK.a" ,"WQBasicComponents/PaySDK/alipaySdk/libcrypto.a","WQBasicComponents/PaySDK/alipaySdk/libssl.a"
+   ss.resource = 'WQBasicComponents/PaySDK/alipaySdk/AlipaySDK.bundle'
+   # ss.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/WQBasicComponents/PaySDK" }
+   # ss.pod_target_xcconfig =  { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/WQBasicComponents/PaySDK" }
+   end
 
 
-  non_arc_files = 'WQBasicComponents/Tool/VoiceTool/amrwapper/*.{h,m}'
+   non_arc_files = 'WQBasicComponents/Tool/VoiceTool/amrwapper/*.{h,m}'
    s.requires_arc = true
    s.exclude_files = non_arc_files
    s.subspec 'WavAmrHelp' do |sna|

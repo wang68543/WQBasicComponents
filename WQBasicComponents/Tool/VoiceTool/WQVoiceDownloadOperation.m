@@ -7,7 +7,7 @@
 //
 
 #import "WQVoiceDownloadOperation.h"
-//#import "amrFileCodec.h"
+#import "amrFileCodec.h"
 @interface WQVoiceDownloadOperation()
 @property (copy ,nonatomic) WQVoiceDowonFinshBlock downFinshBlock;
 @property (copy ,nonatomic) WQConvertVoiceBlock converVoiceBlock;
@@ -61,7 +61,7 @@
                         case WQConvertBase64AmrToWav:
                             data = [[NSData alloc] initWithBase64EncodedData:data options:NSDataBase64DecodingIgnoreUnknownCharacters];
                         case WQConvertVoiceAmrToWav:
-//                            convertData = DecodeAMRToWAVE(data);
+                            convertData = DecodeAMRToWAVE(data);
                             break;
                         case WQConvertVoiceNone:
                         default:

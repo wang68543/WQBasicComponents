@@ -9,7 +9,7 @@
 #import "WQVoiceRecordManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import "WQAppInfo.h"
-//#import "amrFileCodec.h"
+#import "amrFileCodec.h"
 @interface WQVoiceRecordManager()
 @property (strong ,nonatomic) NSOperationQueue *operationQueue;
 @property (nonatomic, strong) AVAudioRecorder *recorder;
@@ -158,7 +158,7 @@
         switch (style) {
             case WQRecordConvertWavToAmr:
                 if(data){
-//                   convertData = EncodeWAVEToAMR(data,1,16);
+                   convertData = EncodeWAVEToAMR(data,1,16);
                 }else{
                     convertData = nil;
                 }

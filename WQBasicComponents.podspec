@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "基础组件"
 
   s.description  = <<-DESC
@@ -84,10 +84,6 @@ Pod::Spec.new do |s|
       sss.dependency 'WQBasicComponents/Tool/BasicHelp'
       sss.dependency 'WQBasicComponents/Category/Category_UIKit'
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
-    end
-    ss.subspec 'PayTool' do |sss|
-      sss.dependency  'WQBasicComponents/WQPaySDK'  
-      sss.source_files = 'WQBasicComponents/Tool/PayTool/*.{h,m}'
     end
   end
 

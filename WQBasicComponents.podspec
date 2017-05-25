@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "基础组件"
 
   s.description  = <<-DESC

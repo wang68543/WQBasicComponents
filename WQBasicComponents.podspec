@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "基础组件"
 
   s.description  = <<-DESC
@@ -44,9 +44,9 @@ Pod::Spec.new do |s|
   s.source_files  = "WQBasicComponents/WQBasicComponents.h"
   
   s.subspec 'WQPublicHelp' do |ss|
-    ss.subspec 'WQBasicInherit' do |sss|
-      sss.source_files = 'WQBasicComponents/WQPublicHelp/WQBasicInherit/*.{h,m}'
-    end 
+    # ss.subspec 'WQBasicInherit' do |sss|
+    #   sss.source_files = 'WQBasicComponents/WQPublicHelp/WQBasicInherit/*.{h,m}'
+    # end 
     ss.subspec 'WQBasicHelp' do |sss|
       sss.source_files = 'WQBasicComponents/WQPublicHelp/WQBasicHelp/*.{h,m}'
     end 
@@ -61,6 +61,7 @@ Pod::Spec.new do |s|
       sss.source_files = 'WQBasicComponents/Category/Category_Foundation/*.{h,m}'
     end 
     ss.subspec 'Category_UIKit' do |sss|
+      sss.dependency 'WQBasicComponents/Category/Category_Vendor'
       sss.source_files = 'WQBasicComponents/Category/Category_UIKit/*.{h,m}'
     end  
     ss.subspec 'Category_Date' do |sss|

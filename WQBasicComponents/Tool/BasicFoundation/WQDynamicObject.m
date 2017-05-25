@@ -135,7 +135,7 @@ typedef NS_ENUM(NSInteger ,VarDataType) {
                 [encoder encodeObject:value forKey:key];
                 break;
             case VarDataTypeBOOL:
-                [encoder encodeBool:value forKey:key];
+                [encoder encodeBool:(BOOL)value forKey:key];
                 break;
             case VarDataTypeInteger:
                 [encoder encodeInteger:(NSInteger)value forKey:key];

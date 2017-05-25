@@ -65,9 +65,19 @@
     CGFloat viewH = CGRectGetHeight(self.frame);
     CGFloat contentW = self.leftViewWidth;
     if(self.tipText.length > 0){
-        if(contentW > 0){
-//            self.
+        if(contentW <= 0){
+           contentW =  [self.tipText boundingRectWithSize:CGSizeMake(200, viewH) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.leftLabel.font} context:nil].size.width;
+            contentW += 5.0;
         }
+        
+        self.leftLabel.frame = CGRectMake(0, 0, contentW, viewH);
+    }else if(self.leftImageView.image){
+        CGFloat imageH = self.leftImageView.image.size.height;
+        if(contentW <= 0){
+            contentW = self.leftImageView.image.size.width;
+        }
+        self.leftImageView.frame = CGRectMake(0, (imageH - self.leftImageView.image.size.height)*0.5, contentW, imageH);
     }
+    self.leftView.frame = CGRectMake(0, 0, viewH, contentW);
 }
 @end

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "基础组件"
 
   s.description  = <<-DESC
@@ -43,6 +43,15 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
   s.source_files  = "WQBasicComponents/WQBasicComponents.h"
   
+  s.subspec 'WQPublicHelp' do |ss|
+    ss.subspec 'WQBasicInherit' do |sss|
+      sss.source_files = 'WQBasicComponents/WQPublicHelp/WQBasicInherit/*.{h,m}'
+    end 
+    ss.subspec 'WQBasicHelp' do |sss|
+      sss.source_files = 'WQBasicComponents/WQPublicHelp/WQBasicHelp/*.{h,m}'
+    end 
+  end
+
 
   s.subspec 'Category' do |ss|
     ss.subspec 'Category_Vendor' do |sss|
@@ -60,47 +69,6 @@ Pod::Spec.new do |s|
     end 
   end
 
-
-  # s.subspec 'WQPaySDK' do |ss|
-  #  ss.subspec 'WeiXinSdk' do |sss|
-  #  sss.vendored_libraries = "WQBasicComponents/PaySDK/WeiXinSdk/libWeChatSDK.a"
-  #  sss.source_files = "WQBasicComponents/PaySDK/WeiXinSdk/*.h"
-  #  sss.libraries = "sqlite3"
-  #  end
-  #   openssl_header_paths ='/Users/ggg/Desktop/Components/WQBaseDemo/WQBasicComponents/PaySDK/AliPaySDK' 
-  #   # openssl_header_paths = "$(SRCROOT)/WQBasicComponents/PaySDK/AliPaySDK"
-  #   # ss.user_target_xcconfig =  { 'HEADER_SEARCH_PATHS' => openssl_header_paths}
-  #  # ss.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '${}WQBasicComponents/PaySDK/AliPaySDK' }
-  #   #只有这个在pod对象里面才起作用 
-  #   ss.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => openssl_header_paths } 
-  #   ss.subspec 'AliPaySDK' do |sss|
-
-  #   openssl_files = "WQBasicComponents/PaySDK/AliPaySDK/openssl/*.h"
-  #   sss.subspec 'openssl' do |ssss|
-  #   ssss.source_files = openssl_files
-  #   sss.vendored_frameworks = 'WQBasicComponents/PaySDK/AliPaySDK/AlipaySDK.framework'
-  #   end
-  #   sss.vendored_libraries = "WQBasicComponents/PaySDK/AliPaySDK/libcrypto.a","WQBasicComponents/PaySDK/AliPaySDK/libssl.a"
-  #   sss.resource = 'WQBasicComponents/PaySDK/AliPaySDK/AlipaySDK.bundle'
-  #   sss.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','CFNetwork','CoreMotion'
-  #   sss.libraries = "c++", "z"
-
-  #   sss.source_files = 'WQBasicComponents/PaySDK/AliPaySDK/*.{h,m}','WQBasicComponents/PaySDK/AliPaySDK/Util/*.{h,m}'
-  #  end
-  # end  
-
-
-
-   non_arc_files = 'WQBasicComponents/Tool/VoiceTool/amrwapper/*.{h,m}'
-   s.requires_arc = true
-   s.exclude_files = non_arc_files
-   s.subspec 'WavAmrHelp' do |sna|
-   sna.requires_arc = false
-   sna.source_files = non_arc_files
-   sna.vendored_libraries = "WQBasicComponents/Tool/VoiceTool/amrwapper/libopencore-amrnb.a","WQBasicComponents/Tool/VoiceTool/amrwapper/libopencore-amrwb.a"
-   end
-
-
   s.subspec 'Tool' do |ss|
     ss.subspec 'BasicFoundation' do |sss|
       sss.source_files = 'WQBasicComponents/Tool/BasicFoundation/*.{h,m}'
@@ -117,16 +85,10 @@ Pod::Spec.new do |s|
       sss.dependency 'WQBasicComponents/Category/Category_UIKit'
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
     end
-    ss.subspec 'VoiceTool' do |sss|
-      sss.dependency 'WQBasicComponents/Tool/NetWorkTool'
-      sss.dependency 'WQBasicComponents/WavAmrHelp'
-      sss.dependency 'WQBasicComponents/Tool/BasicHelp'
-      sss.source_files = 'WQBasicComponents/Tool/VoiceTool/*.{h,m}'
+    ss.subspec 'PayTool' do |sss|
+      sss.dependency  'WQBasicComponents/WQPaySDK'  
+      sss.source_files = 'WQBasicComponents/Tool/PayTool/*.{h,m}'
     end
-    # ss.subspec 'PayTool' do |sss|
-    #   sss.dependency  'WQBasicComponents/WQPaySDK'  
-    #   sss.source_files = 'WQBasicComponents/Tool/PayTool/*.{h,m}'
-    # end
   end
 
   s.subspec 'UICustom' do |ss|

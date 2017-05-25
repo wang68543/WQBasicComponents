@@ -10,6 +10,13 @@
 #import "UIImageView+WebCache.h"
 
 @implementation UIImageView (WQSDWebImage)
+
+-(void)downloadMemberHeadImage:(NSString *)url{
+    [self downloadImage:url placeholder:@""];
+}
+-(void)downloadAccountHeadImage:(NSString *)url{
+    [self downloadImage:url placeholder:@""];
+}
 -(void)downloadHeadImage:(NSString *)url{
     [self downloadImage:url placeholder:@""];
 }

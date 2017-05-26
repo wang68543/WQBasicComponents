@@ -10,6 +10,17 @@
 #import "Colours.h"
 @interface UIColor (WQColor)
 +(instancetype)randomColor;
+/** 主题颜色 主要是navBar的颜色 */
++(instancetype)themeColor;
+/** 导航栏上标题的颜色 */
++(instancetype)navBarTitleColor;
+/** 导航栏上Item标题的颜色 */
++(instancetype)navBarItemTitleColor;
+/** 通用控制器 颜色背景 */
++(instancetype)viewControllerNormalBackgroundColor;
+/** 控制器 灰色背景 */
++(instancetype)viewControllerGrayBackgroundColor;
+
 
 +(instancetype)textTitle1;
 +(instancetype)textTitle2;

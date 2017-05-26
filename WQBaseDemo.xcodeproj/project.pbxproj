@@ -34,15 +34,9 @@
 		DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */; };
 		DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */; };
 		DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */; };
-		DE0A01F11ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */; };
 		DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */; };
 		DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */; };
 		DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */; };
-		DE0A01FF1ED2BEDA0054DD17 /* WQStarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */; };
-		DE0A02001ED2BEDA0054DD17 /* WQStarLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */; };
-		DE0A02011ED2BEDA0054DD17 /* WQEdgeTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */; };
-		DE0A02021ED2BEDA0054DD17 /* WQStepNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */; };
-		DE0A02031ED2BEDA0054DD17 /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */; };
 		DE0A02841ED2C7060054DD17 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02831ED2C7060054DD17 /* libsqlite3.tbd */; };
 		DE0A02861ED2C7170054DD17 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02851ED2C7170054DD17 /* CoreMotion.framework */; };
 		DE0A02891ED2C7290054DD17 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02871ED2C7290054DD17 /* CoreTelephony.framework */; };
@@ -55,7 +49,7 @@
 		DE4D95F71ED574B900F9D641 /* NSString+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D95F61ED574B900F9D641 /* NSString+WQHelp.m */; };
 		DE4D96041ED5829F00F9D641 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D96031ED5829F00F9D641 /* Colours.m */; };
 		DE4D96071ED5832C00F9D641 /* UIColor+WQColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D96061ED5832C00F9D641 /* UIColor+WQColor.m */; };
-		DEAE4AD21ED40D5E00471DC3 /* WQTipTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE4AD11ED40D5E00471DC3 /* WQTipTextField.m */; };
+		DE52C93E1ED7DAAE00FDE643 /* UIView+WQFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DE52C93D1ED7DAAE00FDE643 /* UIView+WQFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,24 +104,12 @@
 		DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAppInfo.m; sourceTree = "<group>"; };
 		DE0A01AA1ED2BEDA0054DD17 /* WQCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCache.h; sourceTree = "<group>"; };
 		DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCache.m; sourceTree = "<group>"; };
-		DE0A01AD1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQKeyboardAdjustHelp.h; sourceTree = "<group>"; };
-		DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQKeyboardAdjustHelp.m; sourceTree = "<group>"; };
 		DE0A01B01ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQSDWebImage.h"; sourceTree = "<group>"; };
 		DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQSDWebImage.m"; sourceTree = "<group>"; };
 		DE0A01B21ED2BEDA0054DD17 /* WQBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBaseAPI.h; sourceTree = "<group>"; };
 		DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBaseAPI.m; sourceTree = "<group>"; };
 		DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHttpTool.h; sourceTree = "<group>"; };
 		DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHttpTool.m; sourceTree = "<group>"; };
-		DE0A01D11ED2BEDA0054DD17 /* WQStarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarContainerView.h; sourceTree = "<group>"; };
-		DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarContainerView.m; sourceTree = "<group>"; };
-		DE0A01D31ED2BEDA0054DD17 /* WQStarLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStarLevel.h; sourceTree = "<group>"; };
-		DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStarLevel.m; sourceTree = "<group>"; };
-		DE0A01D61ED2BEDA0054DD17 /* WQEdgeTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEdgeTitleButton.h; sourceTree = "<group>"; };
-		DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEdgeTitleButton.m; sourceTree = "<group>"; };
-		DE0A01D81ED2BEDA0054DD17 /* WQStepNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStepNumberView.h; sourceTree = "<group>"; };
-		DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStepNumberView.m; sourceTree = "<group>"; };
-		DE0A01DA1ED2BEDA0054DD17 /* WQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTextView.h; sourceTree = "<group>"; };
-		DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTextView.m; sourceTree = "<group>"; };
 		DE0A01DC1ED2BEDA0054DD17 /* WQBasicComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBasicComponents.h; sourceTree = "<group>"; };
 		DE0A02041ED2BEEF0054DD17 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DE0A02831ED2C7060054DD17 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -146,8 +128,8 @@
 		DE4D96031ED5829F00F9D641 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		DE4D96051ED5832C00F9D641 /* UIColor+WQColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WQColor.h"; sourceTree = "<group>"; };
 		DE4D96061ED5832C00F9D641 /* UIColor+WQColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WQColor.m"; sourceTree = "<group>"; };
-		DEAE4AD01ED40D5E00471DC3 /* WQTipTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTipTextField.h; sourceTree = "<group>"; };
-		DEAE4AD11ED40D5E00471DC3 /* WQTipTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTipTextField.m; sourceTree = "<group>"; };
+		DE52C93C1ED7DAAE00FDE643 /* UIView+WQFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WQFrame.h"; sourceTree = "<group>"; };
+		DE52C93D1ED7DAAE00FDE643 /* UIView+WQFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WQFrame.m"; sourceTree = "<group>"; };
 		F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,7 +231,6 @@
 				DE4D95F21ED5739900F9D641 /* WQPublicHelp */,
 				DE0A017C1ED2BEDA0054DD17 /* Category */,
 				DE0A019F1ED2BEDA0054DD17 /* Tool */,
-				DE0A01CF1ED2BEDA0054DD17 /* UICustom */,
 				DE0A01DC1ED2BEDA0054DD17 /* WQBasicComponents.h */,
 			);
 			path = WQBasicComponents;
@@ -307,6 +288,8 @@
 				DE0A01951ED2BEDA0054DD17 /* UIImageView+WQAnimation.m */,
 				DE4D96051ED5832C00F9D641 /* UIColor+WQColor.h */,
 				DE4D96061ED5832C00F9D641 /* UIColor+WQColor.m */,
+				DE52C93C1ED7DAAE00FDE643 /* UIView+WQFrame.h */,
+				DE52C93D1ED7DAAE00FDE643 /* UIView+WQFrame.m */,
 			);
 			path = Category_UIKit;
 			sourceTree = "<group>";
@@ -333,7 +316,6 @@
 			children = (
 				DE0A01A01ED2BEDA0054DD17 /* BasicFoundation */,
 				DE0A01A51ED2BEDA0054DD17 /* BasicHelp */,
-				DE0A01AC1ED2BEDA0054DD17 /* FunctionHelp */,
 				DE0A01AF1ED2BEDA0054DD17 /* NetWorkTool */,
 			);
 			path = Tool;
@@ -363,15 +345,6 @@
 			path = BasicHelp;
 			sourceTree = "<group>";
 		};
-		DE0A01AC1ED2BEDA0054DD17 /* FunctionHelp */ = {
-			isa = PBXGroup;
-			children = (
-				DE0A01AD1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.h */,
-				DE0A01AE1ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m */,
-			);
-			path = FunctionHelp;
-			sourceTree = "<group>";
-		};
 		DE0A01AF1ED2BEDA0054DD17 /* NetWorkTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,41 +356,6 @@
 				DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */,
 			);
 			path = NetWorkTool;
-			sourceTree = "<group>";
-		};
-		DE0A01CF1ED2BEDA0054DD17 /* UICustom */ = {
-			isa = PBXGroup;
-			children = (
-				DE0A01D01ED2BEDA0054DD17 /* StarView */,
-				DE0A01D51ED2BEDA0054DD17 /* ViewCustom */,
-			);
-			path = UICustom;
-			sourceTree = "<group>";
-		};
-		DE0A01D01ED2BEDA0054DD17 /* StarView */ = {
-			isa = PBXGroup;
-			children = (
-				DE0A01D11ED2BEDA0054DD17 /* WQStarContainerView.h */,
-				DE0A01D21ED2BEDA0054DD17 /* WQStarContainerView.m */,
-				DE0A01D31ED2BEDA0054DD17 /* WQStarLevel.h */,
-				DE0A01D41ED2BEDA0054DD17 /* WQStarLevel.m */,
-			);
-			path = StarView;
-			sourceTree = "<group>";
-		};
-		DE0A01D51ED2BEDA0054DD17 /* ViewCustom */ = {
-			isa = PBXGroup;
-			children = (
-				DE0A01D61ED2BEDA0054DD17 /* WQEdgeTitleButton.h */,
-				DE0A01D71ED2BEDA0054DD17 /* WQEdgeTitleButton.m */,
-				DE0A01D81ED2BEDA0054DD17 /* WQStepNumberView.h */,
-				DE0A01D91ED2BEDA0054DD17 /* WQStepNumberView.m */,
-				DE0A01DA1ED2BEDA0054DD17 /* WQTextView.h */,
-				DE0A01DB1ED2BEDA0054DD17 /* WQTextView.m */,
-				DEAE4AD01ED40D5E00471DC3 /* WQTipTextField.h */,
-				DEAE4AD11ED40D5E00471DC3 /* WQTipTextField.m */,
-			);
-			path = ViewCustom;
 			sourceTree = "<group>";
 		};
 		DE4D95F21ED5739900F9D641 /* WQPublicHelp */ = {
@@ -567,21 +505,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */,
+				DE52C93E1ED7DAAE00FDE643 /* UIView+WQFrame.m in Sources */,
 				DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */,
 				DE4D96071ED5832C00F9D641 /* UIColor+WQColor.m in Sources */,
 				DE0A01E41ED2BEDA0054DD17 /* NSFileManager+WQPath.m in Sources */,
-				DE0A01FF1ED2BEDA0054DD17 /* WQStarContainerView.m in Sources */,
 				DE0A01E51ED2BEDA0054DD17 /* UIBarButtonItem+WQInitHelp.m in Sources */,
 				DE0A01ED1ED2BEDA0054DD17 /* WQError.m in Sources */,
 				DE0A01E81ED2BEDA0054DD17 /* NSDate+Utilities.m in Sources */,
 				DE0A01691ED2BE490054DD17 /* ViewController.m in Sources */,
-				DE0A02031ED2BEDA0054DD17 /* WQTextView.m in Sources */,
-				DE0A02011ED2BEDA0054DD17 /* WQEdgeTitleButton.m in Sources */,
 				DE0A01E71ED2BEDA0054DD17 /* UIImageView+WQAnimation.m in Sources */,
 				DE4D95F71ED574B900F9D641 /* NSString+WQHelp.m in Sources */,
 				DE0A01E61ED2BEDA0054DD17 /* UIImage+WQHelp.m in Sources */,
 				DE0A01DD1ED2BEDA0054DD17 /* NSDate+WQFormat.m in Sources */,
-				DE0A01F11ED2BEDA0054DD17 /* WQKeyboardAdjustHelp.m in Sources */,
 				DE0A01661ED2BE490054DD17 /* AppDelegate.m in Sources */,
 				DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */,
 				DE0A01EA1ED2BEDA0054DD17 /* UIButton+countDown.m in Sources */,
@@ -592,14 +527,11 @@
 				DE0A01EB1ED2BEDA0054DD17 /* UIGestureRecognizer+Block.m in Sources */,
 				DE0A01E31ED2BEDA0054DD17 /* WQDateFormater.m in Sources */,
 				DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */,
-				DE0A02001ED2BEDA0054DD17 /* WQStarLevel.m in Sources */,
 				DE0A01631ED2BE490054DD17 /* main.m in Sources */,
 				DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */,
-				DEAE4AD21ED40D5E00471DC3 /* WQTipTextField.m in Sources */,
 				DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */,
 				DE0A01E01ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m in Sources */,
 				DE4D96041ED5829F00F9D641 /* Colours.m in Sources */,
-				DE0A02021ED2BEDA0054DD17 /* WQStepNumberView.m in Sources */,
 				DE0A01DE1ED2BEDA0054DD17 /* NSDate+WQHandle.m in Sources */,
 				DE0A016F1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld in Sources */,
 			);

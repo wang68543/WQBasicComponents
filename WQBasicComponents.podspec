@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.7"
-  s.summary      = "基础组件"
+  s.version      = "0.0.8"
+  s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
                       将之前的组件进行细致拆分
@@ -78,9 +78,9 @@ Pod::Spec.new do |s|
       sss.dependency 'WQBasicComponents/Category/Category_Foundation'
       sss.source_files = 'WQBasicComponents/Tool/BasicHelp/*.{h,m}'
     end
-    ss.subspec 'FunctionHelp' do |sss|
-      sss.source_files = 'WQBasicComponents/Tool/FunctionHelp/*.{h,m}'
-    end
+    # ss.subspec 'FunctionHelp' do |sss|
+    #   sss.source_files = 'WQBasicComponents/Tool/FunctionHelp/*.{h,m}'
+    # end
     ss.subspec 'NetWorkTool' do |sss|
       sss.dependency 'WQBasicComponents/Tool/BasicHelp'
       sss.dependency 'WQBasicComponents/Category/Category_UIKit'
@@ -88,14 +88,14 @@ Pod::Spec.new do |s|
     end
   end
 
-  s.subspec 'UICustom' do |ss|
-    ss.subspec 'ViewCustom' do |sss|
-      sss.source_files = 'WQBasicComponents/UICustom/ViewCustom/*.{h,m}'
-    end 
-     ss.subspec 'StarView' do |sss|
-      sss.source_files = 'WQBasicComponents/UICustom/StarView/*.{h,m}'
-    end 
-  end
+  # s.subspec 'UICustom' do |ss|
+  #   ss.subspec 'ViewCustom' do |sss|
+  #     sss.source_files = 'WQBasicComponents/UICustom/ViewCustom/*.{h,m}'
+  #   end 
+  #    ss.subspec 'StarView' do |sss|
+  #     sss.source_files = 'WQBasicComponents/UICustom/StarView/*.{h,m}'
+  #   end 
+  # end
   s.dependency 'AFNetworking'
   s.dependency 'SDWebImage'
 

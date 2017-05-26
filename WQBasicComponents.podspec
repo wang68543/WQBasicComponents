@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
-                      将之前的组件进行细致拆分
+                      平常收集的一些常用的工具以及分类
                       DESC
               
 

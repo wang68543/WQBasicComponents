@@ -31,8 +31,8 @@
 // 判断是否为iPhone 6/6s
 #define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
 
-// 判断是否为iPhone 6Plus/6sPlus
-#define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+// 判断是否为iPhone Plus屏
+#define iPhone_Plus [[UIScreen mainScreen] bounds].size.width >= 414.0f && [[UIScreen mainScreen] bounds].size.height >= 736.0f
 
 //根据设备实际尺寸进行统一分类
 #define is320_WIDTH [[UIScreen mainScreen] bounds].size.width == 320.0f

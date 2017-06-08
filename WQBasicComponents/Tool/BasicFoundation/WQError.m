@@ -21,4 +21,8 @@
 +(instancetype)errorWithMsg:(NSString *)msg{
     return [self errorWithCode:-5000 errorInfo:msg];
 }
+//TODO: 直接描述错误信息
+//-(NSString *)description{
+//    
+//}
 @end

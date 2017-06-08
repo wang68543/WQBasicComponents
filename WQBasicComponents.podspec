@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.0.9"
+  s.version      = "0.1.1"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
@@ -60,10 +60,6 @@ Pod::Spec.new do |s|
     ss.subspec 'Category_Foundation' do |sss|
       sss.source_files = 'WQBasicComponents/Category/Category_Foundation/*.{h,m}'
     end 
-    ss.subspec 'Category_UIKit' do |sss|
-      sss.dependency 'WQBasicComponents/Category/Category_Vendor'
-      sss.source_files = 'WQBasicComponents/Category/Category_UIKit/*.{h,m}'
-    end  
     ss.subspec 'Category_Date' do |sss|
       sss.dependency 'WQBasicComponents/Category/Category_Vendor'
       sss.source_files = 'WQBasicComponents/Category/Category_Date/*.{h,m}'
@@ -78,24 +74,12 @@ Pod::Spec.new do |s|
       sss.dependency 'WQBasicComponents/Category/Category_Foundation'
       sss.source_files = 'WQBasicComponents/Tool/BasicHelp/*.{h,m}'
     end
-    # ss.subspec 'FunctionHelp' do |sss|
-    #   sss.source_files = 'WQBasicComponents/Tool/FunctionHelp/*.{h,m}'
-    # end
     ss.subspec 'NetWorkTool' do |sss|
       sss.dependency 'WQBasicComponents/Tool/BasicHelp'
-      sss.dependency 'WQBasicComponents/Category/Category_UIKit'
+      sss.dependency 'WQBasicComponents/Category/Category_Foundation'
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
     end
   end
-
-  # s.subspec 'UICustom' do |ss|
-  #   ss.subspec 'ViewCustom' do |sss|
-  #     sss.source_files = 'WQBasicComponents/UICustom/ViewCustom/*.{h,m}'
-  #   end 
-  #    ss.subspec 'StarView' do |sss|
-  #     sss.source_files = 'WQBasicComponents/UICustom/StarView/*.{h,m}'
-  #   end 
-  # end
   s.dependency 'AFNetworking'
   s.dependency 'SDWebImage'
 

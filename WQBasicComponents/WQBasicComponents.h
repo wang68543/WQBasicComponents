@@ -18,15 +18,6 @@
 #import "NSString+WQBridgeFormat.h"
 #import "NSString+WQDate.h"
 
-//TODO: Layout
-#import "UIView+WQFrame.h"
-
-
-//TODO: 第三方辅助分类
-#import "UIGestureRecognizer+Block.h"
-//TODO: 辅助分类
-#import "UIColor+WQColor.h"
-
 //TODO: 工具类
 #import "UIImageView+WQSDWebImage.h"
 #endif /* WQBasicComponents_h */

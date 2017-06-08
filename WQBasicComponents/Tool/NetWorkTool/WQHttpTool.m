@@ -8,7 +8,6 @@
 
 #import "WQHttpTool.h"
 #import "WQAppInfo.h"
-#import "UIImage+WQHelp.h"
 
 #import "AFNetworking.h"
 
@@ -34,7 +33,7 @@ static NSString * kBaseUrl = @"";
         //接收参数类型
         client.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif", nil];
         //设置超时时间
-        client.requestSerializer.timeoutInterval = 15;
+        client.requestSerializer.timeoutInterval = 60;
         //安全策略
         client.securityPolicy = [AFSecurityPolicy defaultPolicy];
     });
@@ -75,7 +74,7 @@ NSString *const kMimeType = @"kUploadMimeType";
         progress:(HttpUploadProgressBlock)progress
          success:(HttpSuccessBlock)success
          failure:(HttpFailureBlock)failure{
-    [self postImageData:[image compressImageToKb:100] path:urlString params:params progress:progress success:success failure:failure];
+    [self postImageData:UIImagePNGRepresentation(image) path:urlString params:params progress:progress success:success failure:failure];
 }
 /**图片上传*/
 +(void)postImageData:(NSData *)imageData

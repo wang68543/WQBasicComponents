@@ -35,13 +35,14 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
         progress:(HttpUploadProgressBlock)progress
          success:(HttpSuccessBlock)success
          failure:(HttpFailureBlock)failure;
-/**语音上传*/
+/** 语音上传 (可自己压缩) */
 +(void)postAudioData:(NSData *)audioData
                 path:(NSString *)urlString
               params:(NSDictionary *)params
             progress:(HttpUploadProgressBlock)progress
              success:(HttpSuccessBlock)success
              failure:(HttpFailureBlock)failure;
+/** 图片上传 (原图上传 不压缩) */
 +(void)postImage:(UIImage *)image
             path:(NSString *)urlString
           params:(NSDictionary *)params

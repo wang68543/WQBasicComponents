@@ -10,4 +10,6 @@
 #import <UIKit/UIKit.h>
 @interface NSString (WQHelp)
 -(CGSize)sizeWithMaxSize:(CGSize)maxSize font:(UIFont *)font;
+/** md5加密 */
+-(NSString *)md5String;
 @end

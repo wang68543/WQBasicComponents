@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CoderObject.h"
+#import "NSObject+PropertyRuntime.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@",[CoderObject propertyTypesDic]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

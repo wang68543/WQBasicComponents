@@ -36,4 +36,5 @@
  */
 -(BOOL)isEualToItem:(WQDynamicObject *)anItem;
 
+
 @end

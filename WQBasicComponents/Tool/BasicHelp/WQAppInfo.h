@@ -15,6 +15,8 @@
 +(NSString *)appVersion;
 /** 存储的上次的版本号 */
 +(NSString *)appLastVersion;
+/** 判断当前app是否是新版本 是的话就存储当前版本号*/
++(BOOL)isNewVersion;
 /** App数字版本号 */
 +(UInt32)appVersionNumber;
 /** App构建版本号 */
@@ -23,8 +25,6 @@
 +(NSString *)appName;
 /** App配置文件里面的名字 */
 +(NSString *)appDisplayName;
-/** 设备令牌 */
-+(NSString *)appDeviceToken;
 /** 设备的唯一标识 */
 +(NSString *)appUUIDString;
 /** 去除唯一标识中的横线 */
@@ -34,9 +34,10 @@
 /** 通过后缀名组成一个唯一的名字 */
 +(NSString *)appUUIDWithPathExtension:(NSString *)pathExtension;
 
-
+/** 设备令牌 */
++(NSString *)appDeviceToken;
 //MARK: 动态保存信息
-+(void)saveDeviceToken:(NSString *)deviceToken;
++(void)saveDeviceToken:(NSData *)deviceData;
 /** 保存当前的版本号(大多用于新特性) */
 +(void)saveCurrentVersion;
 @end

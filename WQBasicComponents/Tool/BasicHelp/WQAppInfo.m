@@ -38,6 +38,15 @@ static NSString *kLastVersion = @"lastVersion";
 +(NSString *)appLastVersion{
     return [WQCache userDefaultObjectWithKey:kLastVersion];
 }
+/** 判断当前app是否是新版本 是的话就存储当前版本号*/
++(BOOL)isNewVersion{
+    NSString *appVersion = [self appVersion];
+    if([appVersion compare:[self appLastVersion]] == NSOrderedDescending){//是新版本
+        [WQCache saveObject:appVersion toUserDefault:kLastVersion];
+        return YES;
+    }
+    return NO;
+}
 //MARK: App数字版本号
 +(UInt32)appVersionNumber{
     return CFBundleGetVersionNumber(CFBundleGetMainBundle());
@@ -77,7 +86,11 @@ static NSString *kLastVersion = @"lastVersion";
 }
 
 //MARK: 动态保存信息
-+(void)saveDeviceToken:(NSString *)deviceToken{
++(void)saveDeviceToken:(NSData *)deviceData{
+   NSString *deviceToken = [deviceData description];
+   deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@">" withString:@""];
+    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     [WQCache saveObject:deviceToken toUserDefault:kDeviceToken];
 }
 +(void)saveCurrentVersion{

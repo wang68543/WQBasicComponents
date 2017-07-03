@@ -21,6 +21,8 @@
 -(NSDate *)formatyyyyMMddHHmmssToDate;
 /** yyyyMMddHHmm */
 -(NSDate *)formatyyyyMMddHHmmToDate;
+/** yyyyMMdd */
+-(NSDate *)formatyyyyMMddToDate;
 /** yyyy-MM-dd HH:mm:ss */
 -(NSDate *)formatyyyy_MM_dd00HH3mm3ssToDate;
 /** yyyy-MM-dd HH:mm */

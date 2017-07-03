@@ -22,6 +22,10 @@
 -(NSDate *)formatyyyyMMddHHmmToDate{
     return [self dateWithFormatString:@"yyyyMMddHHmm"];
 }
+//MARK: -- yyyyMMdd
+-(NSDate *)formatyyyyMMddToDate{
+    return [self dateWithFormatString:@"yyyyMMdd"];
+}
 //MARK: -- yyyy-MM-dd HH:mm:ss
 -(NSDate *)formatyyyy_MM_dd00HH3mm3ssToDate{
     return [self dateWithFormatString:@"yyyy-MM-dd HH:mm:ss"];

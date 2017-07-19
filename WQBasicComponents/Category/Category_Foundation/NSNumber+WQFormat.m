@@ -11,6 +11,6 @@
 @implementation NSNumber (WQFormat)
 //MARK: -- 转换为整型字符串
 -(NSString *)integerString{
-    return [NSString stringWithFormat:@"%ld",[self integerValue]];
+    return [NSString stringWithFormat:@"%ld",(long)[self integerValue]];
 }
 @end

@@ -10,9 +10,14 @@
 #import "WQDateFormater.h"
 
 @implementation NSString (WQDate)
+//MARK: -- 将豪秒时间戳转换为日期
 -(NSDate *)formatMillionSecondsToDate{
     NSString *timeSeconds = [self substringToIndex:self.length - 3];
     return [NSDate dateWithTimeIntervalSince1970:timeSeconds.floatValue];
+}
+//MARK: -- 将秒时间戳转换为日期
+-(NSDate *)formatSecondsToDate{
+    return [NSDate dateWithTimeIntervalSince1970:[self integerValue]];
 }
 //MARK: -- yyyyMMddHHmmss
 -(NSDate *)formatyyyyMMddHHmmssToDate{

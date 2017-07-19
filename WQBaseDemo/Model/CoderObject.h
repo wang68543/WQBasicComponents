@@ -9,13 +9,13 @@
 
 #import "Student.h"
 #import <UIKit/UIKit.h>
-
+#import "WQDynamicObject.h"
 typedef void(^TestBlock)(int age);
 @protocol Aprotocol <NSObject>
 
 
 @end
-@interface CoderObject : NSObject
+@interface CoderObject : WQDynamicObject
 
 @property(nonatomic, copy)NSString<Aprotocol> *name ;
 @property(nonatomic, assign)int score;

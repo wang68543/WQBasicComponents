@@ -20,8 +20,13 @@ typedef NS_ENUM(NSInteger,CacheDocumentType) {
 
 //MARK:  =========== Cache To File ===========
 +(NSString *)cacheName:(NSString *)name flag:(NSString *)flag;
++(void)cacheObject:(id)object name:(NSString *)name flag:(NSString *)flag;
++(id)objectWithName:(NSString *)name flag:(NSString *)flag;
+
 +(void)cacheObject:(id)object name:(NSString *)name;
 +(id)objectWithName:(NSString *)name;
+
+
 
 +(void)cacheObject:(id)object name:(NSString *)name cacheType:(CacheDocumentType)doucumentType;
 +(id)objectWithName:(NSString *)name cacheType:(CacheDocumentType)doucumentType;
@@ -43,7 +48,7 @@ typedef NS_ENUM(NSInteger,CacheDocumentType) {
 +(NSInteger)userDefaultIntegerWithKey:(NSString *)key;
 +(void)saveObject:(id)object toUserDefault:(NSString *)key;
 +(void)saveBool:(BOOL)boolValue toUserDefault:(NSString *)key;
-+(void)saveInteger:(BOOL)intValue toUserDefault:(NSString *)key;
++(void)saveInteger:(NSInteger)intValue toUserDefault:(NSString *)key;
 
 
 //MARK: ======= Refresh Time =======

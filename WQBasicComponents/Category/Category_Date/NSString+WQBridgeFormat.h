@@ -11,4 +11,6 @@
 @interface NSString (WQBridgeFormat)
 /** yyyy-MM-dd HH:mm:ss 转 yyyy-MM-dd HH:mm*/
 -(NSString *)bridgeFormatyyyy_MM_dd00HH3mm3ssTOyyyy_MM_dd00HH3mm;
+/** yyyyMMdd 转 yyyy-MM-dd*/
+-(NSString *)bridgeFormatyyyyMMddTOyyyy_MM_dd;
 @end

@@ -14,9 +14,13 @@
  根据格式化格式将字符串转换为日期
  */
 -(NSDate *)dateWithFormatString:(NSString *)formatString;
- //TODO: 从字符串转为日期的(如果字符串中不含时区 则默认会当前时区) 将会转换为零时区的日期NSDate(自动调整NSDate(零时区)与当前时区的时间差)-->NSDateFormatter 会做的事
+ //TODO: 从字符串转为日期的(如果字符串中不含时区 则默认会当前时区(即UTC时区)) 将会转换为零时区的日期NSDate(自动调整NSDate(零时区)与当前时区的时间差)-->NSDateFormatter 会做的事
 /**下划线表示- 2表示汉字 3表示:  4表示斜杠/ 其余的使用日期本身的本地化 00表示空格*/
+/** 将豪秒时间戳转换为日期 */
 -(NSDate *)formatMillionSecondsToDate;
+/** 将秒时间戳转换为日期 */
+-(NSDate *)formatSecondsToDate;
+
 /** yyyyMMddHHmmss */
 -(NSDate *)formatyyyyMMddHHmmssToDate;
 /** yyyyMMddHHmm */

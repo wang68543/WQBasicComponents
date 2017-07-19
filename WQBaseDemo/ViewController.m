@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "CoderObject.h"
 #import "NSObject+PropertyRuntime.h"
+#import "Student.h"
+#import "SubCoderObject.h"
 
 @interface ViewController ()
 
@@ -18,7 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",[CoderObject propertyTypesDic]);
+    
+    SubCoderObject *oneObject = [[SubCoderObject alloc] init];
+    oneObject.rect = CGRectMake(10, 20, 30, 40);
+    oneObject.wqPoint = WQPointMake(20, 40);
+    
+//  
+//      NSString *cacheDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+//    
+//    [NSKeyedArchiver archiveRootObject:oneObject toFile:[cacheDirectory stringByAppendingPathComponent:@"test"]];
+//      SubCoderObject *copyObject = [NSKeyedUnarchiver unarchiveObjectWithFile:[cacheDirectory stringByAppendingPathComponent:@"test"]];
+    SubCoderObject *copyObject = [oneObject wq_copyInstance];
+    
+    NSLog(@"%f",copyObject.wqPoint.x);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

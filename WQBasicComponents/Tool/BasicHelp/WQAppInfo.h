@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef NS_ENUM(NSInteger,WQAppLanguage) {
+    kLanguageSimpleChina,//缺省为中文
+    kLanguageEnglinsh,
+};
 
 @interface WQAppInfo : NSObject
+
+/** 屏幕高 */
++(CGFloat)app_Height;
+/** 屏幕宽 */
++(CGFloat)app_Width;
+
++(WQAppLanguage)appLanguage;
 /** App的唯一标识 */
 +(NSString *)appBundle_Identifire;
 /** App版本号 */

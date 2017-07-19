@@ -12,7 +12,7 @@
 #define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
-#define ScaleiPhone5 (APP_HEIGHT/568.0) //以iphone5的高度来缩放比例
+#define ScaleByiPhone5 (APP_HEIGHT/568.0) //以iphone5的高度来缩放比例
 //TODO: 字体
 #define MYFont(a) [UIFont systemFontOfSize:(a)]
 #define MYFontM(a) [UIFont boldSystemFontOfSize:(a)]

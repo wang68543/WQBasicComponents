@@ -11,15 +11,6 @@
 
 @implementation UIImageView (WQSDWebImage)
 
--(void)downloadMemberHeadImage:(NSString *)url{
-    [self downloadImage:url placeholder:@""];
-}
--(void)downloadAccountHeadImage:(NSString *)url{
-    [self downloadImage:url placeholder:@""];
-}
--(void)downloadHeadImage:(NSString *)url{
-    [self downloadImage:url placeholder:@""];
-}
 -(void)downloadImage:(NSString *)url placeholder:(NSString *)imageName{
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:imageName]];
 }

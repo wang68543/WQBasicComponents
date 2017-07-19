@@ -35,7 +35,7 @@
 }
 
 +(NSArray *)classesWithArray:(NSArray *)array classInArray:(NSDictionary *)inArrayModels{
-    if(![array isKindOfClass:[NSArray class]]) return [NSArray array];
+    if(![array isKindOfClass:[NSArray class]] || array.count <= 0) return [NSArray array];
     NSMutableArray *items = [NSMutableArray array];
     for (NSDictionary *dic in array) {
         WQDynamicObject *obj = [self classWithDict:dic classInDict:inArrayModels];
@@ -97,36 +97,37 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder{
         // 归档
-        NSDictionary *ocEnumTypes = [[self class] wq_propertyEnumTypesDic];
-        [ocEnumTypes enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSNumber * _Nonnull obj, BOOL * _Nonnull stop) {
-            WQVarType varType = [obj integerValue];
-            id value = [self valueForKey:key];
-            switch (varType) {
-                case WQVarBOOL:
-                    [encoder encodeBool:[value boolValue] forKey:key];
-                    break;
-                case WQVarFloat:
-                    [encoder encodeFloat:[value floatValue] forKey:key];
-                    break;
-                case WQVarInteger:
-                    [encoder encodeInteger:[value integerValue] forKey:key];
-                    break;
-                case WQVarDouble:
-                    [encoder encodeDouble:[value doubleValue] forKey:key];
-                    break;
-                case WQVarBlock:
-                case WQVarID:
-                case WQVarFoundationObject:
-                case WQVarCustomObject:
-                    [encoder encodeObject:value forKey:key];
-                    break;
-                case WQVarStruct:
-                    //FIXME:暂时不知道结构体怎么处理
-                    break;
-                default://剩下的一些类型暂时不处理
-                    break;
-            }
-        }];
+    NSArray<WQProperty *> *ocEnumTypes = [[self class] wq_properties];
+    [ocEnumTypes enumerateObjectsUsingBlock:^(WQProperty * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        WQVarType varType = obj.varType;
+        NSString *key = obj.popertyName;
+        id value = [self valueForKey:key];
+        switch (varType) {
+            case WQVarBOOL:
+                [encoder encodeBool:[value boolValue] forKey:key];
+                break;
+            case WQVarFloat:
+                [encoder encodeFloat:[value floatValue] forKey:key];
+                break;
+            case WQVarInteger:
+                [encoder encodeInteger:[value integerValue] forKey:key];
+                break;
+            case WQVarDouble:
+                [encoder encodeDouble:[value doubleValue] forKey:key];
+                break;
+            case WQVarBlock:
+            case WQVarID:
+            case WQVarFoundationObject:
+            case WQVarCustomObject:
+                [encoder encodeObject:value forKey:key];
+                break;
+            case WQVarStruct:
+                //FIXME: 结构体无法encodeObject
+            default://剩下的一些类型暂时不处理
+                break;
+        }
+
+    }];
 
 }
 
@@ -135,9 +136,10 @@
 {
     if (self = [super init]) {
         // 归档
-        NSDictionary *ocEnumTypes = [[self class] wq_propertyEnumTypesDic];
-        [ocEnumTypes enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, NSNumber * _Nonnull obj, BOOL * _Nonnull stop) {
-            WQVarType varType = [obj integerValue];
+        NSArray<WQProperty *> *ocEnumTypes = [[self class] wq_properties];
+        [ocEnumTypes enumerateObjectsUsingBlock:^(WQProperty * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            WQVarType varType = obj.varType;
+            NSString *key = obj.popertyName;
             switch (varType) {
                 case WQVarBOOL:
                     [self setValue:@([decoder decodeBoolForKey:key]) forKey:key];
@@ -157,9 +159,9 @@
                 case WQVarCustomObject:
                     [self setValue:[decoder decodeObjectForKey:key] forKey:key];
                     break;
+                    
                 case WQVarStruct:
-                    //FIXME:暂时不知道结构体怎么处理
-                    break;
+                    //FIXME: 结构体无法decode
                 default://剩下的一些类型暂时不处理
                     break;
             }

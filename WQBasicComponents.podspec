@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
@@ -54,6 +54,10 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Category' do |ss|
+  	
+  	ss.subspec 'Category_String' do |sss|
+      sss.source_files = 'WQBasicComponents/Category/Category_String/*.{h,m}'
+    end
     ss.subspec 'Category_Vendor' do |sss|
       sss.source_files = 'WQBasicComponents/Category/Category_Vendor/*.{h,m}'
     end 

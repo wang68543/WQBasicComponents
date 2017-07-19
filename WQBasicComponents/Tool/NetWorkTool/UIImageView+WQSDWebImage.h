@@ -17,20 +17,4 @@
  @param imageName 占位图片
  */
 - (void)downloadImage:(NSString *)url placeholder:(NSString *)imageName;
-
-/**
- 下载成员头像自带默认头像
- */
-- (void)downloadMemberHeadImage:(NSString *)url;
-
-/**
- 下载账户头像自带默认头像
- */
-- (void)downloadAccountHeadImage:(NSString *)url;
-/**
- 下载用户头像图片(含默认占位图)
-
- @param url 头像路径(不含主机地址)
- */
-- (void)downloadHeadImage:(NSString *)url;
 @end

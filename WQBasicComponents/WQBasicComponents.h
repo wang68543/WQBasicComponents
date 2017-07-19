@@ -23,9 +23,16 @@
 
 //TODO: 工具类
 #import "UIImageView+WQSDWebImage.h"
+#import "UIButton+WQSDWebImage.h"
 
 //TODO: 辅助
-#import "NSString+WQHelp.h"
+#import "NSString+WQHash.h"
+#import "NSString+WQSafe.h"
+
+#import "NSError+WQUtilities.h"
+#import "NSNumber+WQFormat.h"
+
+
 
 #import "UIImage+WQHelp.h"
 

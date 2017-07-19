@@ -28,15 +28,16 @@
     if(self.isThisYear){
         if(self.isThisMonth){
             if(self.isToday){
-               formatTime = [NSString stringWithFormat:@"今天 %@",self.TOHH3mm];
+//               formatTime = [NSString stringWithFormat:@"今天 %@",self.TOHH3mm];
+                formatTime = self.TOHH3mm;
             }else{
-                formatTime = self.TOMM2dd2HH3mm;
+                formatTime = self.TOMM_dd00HH3mm;
             }
         }else{
-           formatTime = self.TOMM2dd2;
+           formatTime = self.TOMM_dd;
         }
     }else{
-        formatTime = self.TOyyyy2MM2dd2;
+        formatTime = self.TOyyyy_MM_dd;
         
     }
     return formatTime;
@@ -68,5 +69,13 @@
     NSTimeInterval timeInterval = [self timeIntervalSince1970];
     long long int milliTime = timeInterval *1000;
     return milliTime;
+}
+//TODO: 返回时间戳对象
+-(NSNumber *)secondsAtNumber{
+    return [NSNumber numberWithUnsignedLong:[self timeIntervalSince1970]];
+}
+//TODO: 返回字符串形式的时间戳
+-(NSString *)secondsAtString{
+     return [NSString stringWithFormat:@"%.0f",self.timeIntervalSince1970];
 }
 @end

@@ -10,6 +10,35 @@
 #import "WQCache.h"
 #import <UIKit/UIKit.h>
 @implementation WQAppInfo
+static CGFloat kAppWidth_;
+static CGFloat kAppHeight_;
++(void)initialize{
+    kAppWidth_ = [UIScreen mainScreen].bounds.size.width;
+    kAppHeight_ = [UIScreen mainScreen].bounds.size.height;
+}
+
++(CGFloat)app_Width{
+    return kAppWidth_;
+}
++(CGFloat)app_Height{
+    return kAppHeight_;
+}
+static WQAppLanguage kLanguage_;
++(WQAppLanguage)appLanguage{
+    if(!kLanguage_){
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSArray *languages = [defaults objectForKey : @"AppleLanguages" ];
+        // 获得当前iPhone使用的语言
+        NSString* currentLanguage = [languages objectAtIndex:0];
+        if([currentLanguage isEqualToString:@"en-US"]){
+            kLanguage_ = kLanguageEnglinsh;
+        }else{
+            kLanguage_ = kLanguageSimpleChina;
+        }
+    }
+    return kLanguage_;
+}
+
 /**存储设备token的健*/
 static NSString *kDeviceToken = @"DEVICE_TOKEN";
 

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface NSString (WQHelp)
--(CGSize)sizeWithMaxSize:(CGSize)maxSize font:(UIFont *)font;
+@interface NSString (WQHash)
+
 /** md5加密 */
 -(NSString *)md5String;
 @end

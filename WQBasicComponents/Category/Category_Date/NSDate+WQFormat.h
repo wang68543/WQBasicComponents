@@ -32,10 +32,14 @@
 -(NSString *)TOyyyy_MM_dd00HH3mm3ss;
 /** yyyy-MM-dd 00:00:00 */
 -(NSString *)TOyyyy_MM_ddClear00HH3mm3ss;
+/** MM-dd HH:mm */
+-(NSString *)TOMM_dd00HH3mm;
 /** MM月dd日 HH:mm */
 -(NSString *)TOMM2dd2HH3mm;
 /** yyyy-MM-dd */
 -(NSString *)TOyyyy_MM_dd;
+/** MM-dd */
+-(NSString *)TOMM_dd;
 /** yyyy年MM月dd日 */
 -(NSString *)TOyyyy2MM2dd2;
 /** yyyy年MM月 */

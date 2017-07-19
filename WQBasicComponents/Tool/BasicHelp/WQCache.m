@@ -14,12 +14,19 @@
 +(NSString *)cacheName:(NSString *)name flag:(NSString *)flag{
     return [NSString stringWithFormat:@"%@-%@",name,flag];
 }
++(void)cacheObject:(id)object name:(NSString *)name flag:(NSString *)flag{
+    [self cacheObject:object name:[self cacheName:name flag:flag]];
+}
++(id)objectWithName:(NSString *)name flag:(NSString *)flag{
+   return  [self objectWithName:[self cacheName:name flag:flag]];
+}
 +(void)cacheObject:(id)object name:(NSString *)name{
     [self cacheObject:object name:name cacheType:0];
 }
 +(id)objectWithName:(NSString *)name{
     return [self objectWithName:name cacheType:0];
 }
+
 +(void)cacheObject:(id)object name:(NSString *)name cacheType:(CacheDocumentType)doucumentType{
     NSString *path = [self pathWithName:name docType:doucumentType];
     if(!path)return;
@@ -103,7 +110,7 @@
     [[self userDefaults] setBool:boolValue forKey:key];
     [[self userDefaults] synchronize];
 }
-+(void)saveInteger:(BOOL)intValue toUserDefault:(NSString *)key{
++(void)saveInteger:(NSInteger)intValue toUserDefault:(NSString *)key{
     [[self userDefaults] setInteger:intValue forKey:key];
     [[self userDefaults] synchronize];
 }

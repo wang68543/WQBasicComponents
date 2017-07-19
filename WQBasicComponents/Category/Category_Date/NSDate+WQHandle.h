@@ -26,4 +26,8 @@
 - (NSInteger)ageWithBirthday;
 /** 将日期转为毫秒时间戳 */
 - (long long int)millisecond;
+/** 返回时间戳对象 */
+-(NSNumber *)secondsAtNumber;
+/** 返回字符串形式的时间戳 */
+-(NSString *)secondsAtString;
 @end

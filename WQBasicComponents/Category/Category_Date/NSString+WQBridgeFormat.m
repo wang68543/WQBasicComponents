@@ -16,6 +16,9 @@
 -(NSString *)bridgeFormatyyyy_MM_dd00HH3mm3ssTOyyyy_MM_dd00HH3mm{
     return [self orignalFormat:@"yyyy-MM-dd HH:mm:ss" targetFormat:@"yyyy-MM-dd HH:mm"];
 }
+-(NSString *)bridgeFormatyyyyMMddTOyyyy_MM_dd{
+    return [self orignalFormat:@"yyyyMMdd" targetFormat:@"yyyy-MM-dd"];
+}
 -(NSString *)orignalFormat:(NSString *)originalFormat targetFormat:(NSString *)targetFormat{
     return  [[self dateWithFormatString:originalFormat] formatDateWithFormat:targetFormat];
 }

@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Student : NSObject
 
+@property (copy ,nonatomic) NSString *userid;
+
+@property (copy ,nonatomic) NSString *myItem;
 @end

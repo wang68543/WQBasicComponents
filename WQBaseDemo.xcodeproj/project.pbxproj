@@ -24,7 +24,6 @@
 		DE0A01E41ED2BEDA0054DD17 /* NSFileManager+WQPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */; };
 		DE0A01E81ED2BEDA0054DD17 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01981ED2BEDA0054DD17 /* NSDate+Utilities.m */; };
 		DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */; };
-		DE0A01ED1ED2BEDA0054DD17 /* WQError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A41ED2BEDA0054DD17 /* WQError.m */; };
 		DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */; };
 		DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */; };
 		DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */; };
@@ -40,10 +39,17 @@
 		DE0A02901ED2C7490054DD17 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A028F1ED2C7490054DD17 /* CFNetwork.framework */; };
 		DE0A02921ED2C7520054DD17 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02911ED2C7520054DD17 /* libc++.tbd */; };
 		DE0A02941ED2C7600054DD17 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02931ED2C7600054DD17 /* libz.tbd */; };
-		DE4D95F71ED574B900F9D641 /* NSString+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4D95F61ED574B900F9D641 /* NSString+WQHelp.m */; };
+		DE35FA7A1F160D88008E9653 /* NSError+WQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DE35FA791F160D88008E9653 /* NSError+WQUtilities.m */; };
+		DE39F02F1F15BD880091EB05 /* SubCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE39F02E1F15BD880091EB05 /* SubCoderObject.m */; };
+		DE5AFF3D1F0DE0A200A3EB92 /* WQProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5AFF3C1F0DE0A200A3EB92 /* WQProperty.m */; };
 		DE66F5631EFCE4EF0066282A /* NSObject+PropertyRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66F5621EFCE4EF0066282A /* NSObject+PropertyRuntime.m */; };
 		DE66F5691EFCEC1A0066282A /* CoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66F5661EFCEC1A0066282A /* CoderObject.m */; };
 		DE66F56A1EFCEC1A0066282A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66F5681EFCEC1A0066282A /* Student.m */; };
+		DE76352B1F17032D00EC26A5 /* NSString+WQHash.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7635261F17032D00EC26A5 /* NSString+WQHash.m */; };
+		DE76352C1F17032D00EC26A5 /* NSString+WQSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7635281F17032D00EC26A5 /* NSString+WQSafe.m */; };
+		DE76352D1F17032D00EC26A5 /* NSString+WQSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */; };
+		DE7635301F17049700EC26A5 /* NSNumber+WQFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */; };
+		DE9601931F0D37580010942B /* UIButton+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */; };
 		DEFBEC651EE8FA34006FDADC /* UIImage+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +85,6 @@
 		DE0A01981ED2BEDA0054DD17 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		DE0A01A11ED2BEDA0054DD17 /* WQDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQDynamicObject.h; sourceTree = "<group>"; };
 		DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQDynamicObject.m; sourceTree = "<group>"; };
-		DE0A01A31ED2BEDA0054DD17 /* WQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQError.h; sourceTree = "<group>"; };
-		DE0A01A41ED2BEDA0054DD17 /* WQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQError.m; sourceTree = "<group>"; };
 		DE0A01A61ED2BEDA0054DD17 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
 		DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
 		DE0A01A81ED2BEDA0054DD17 /* WQAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAppInfo.h; sourceTree = "<group>"; };
@@ -104,15 +108,29 @@
 		DE0A028F1ED2C7490054DD17 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DE0A02911ED2C7520054DD17 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DE0A02931ED2C7600054DD17 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DE35FA781F160D88008E9653 /* NSError+WQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+WQUtilities.h"; sourceTree = "<group>"; };
+		DE35FA791F160D88008E9653 /* NSError+WQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+WQUtilities.m"; sourceTree = "<group>"; };
+		DE39F02D1F15BD880091EB05 /* SubCoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCoderObject.h; sourceTree = "<group>"; };
+		DE39F02E1F15BD880091EB05 /* SubCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCoderObject.m; sourceTree = "<group>"; };
 		DE4D95F41ED573ED00F9D641 /* WQConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQConstans.h; sourceTree = "<group>"; };
-		DE4D95F51ED574B900F9D641 /* NSString+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQHelp.h"; sourceTree = "<group>"; };
-		DE4D95F61ED574B900F9D641 /* NSString+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQHelp.m"; sourceTree = "<group>"; };
+		DE5AFF3B1F0DE0A200A3EB92 /* WQProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQProperty.h; sourceTree = "<group>"; };
+		DE5AFF3C1F0DE0A200A3EB92 /* WQProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQProperty.m; sourceTree = "<group>"; };
 		DE66F5611EFCE4EF0066282A /* NSObject+PropertyRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyRuntime.h"; sourceTree = "<group>"; };
 		DE66F5621EFCE4EF0066282A /* NSObject+PropertyRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyRuntime.m"; sourceTree = "<group>"; };
 		DE66F5651EFCEC1A0066282A /* CoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoderObject.h; sourceTree = "<group>"; };
 		DE66F5661EFCEC1A0066282A /* CoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoderObject.m; sourceTree = "<group>"; };
 		DE66F5671EFCEC1A0066282A /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		DE66F5681EFCEC1A0066282A /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		DE7635251F17032D00EC26A5 /* NSString+WQHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQHash.h"; sourceTree = "<group>"; };
+		DE7635261F17032D00EC26A5 /* NSString+WQHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQHash.m"; sourceTree = "<group>"; };
+		DE7635271F17032D00EC26A5 /* NSString+WQSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQSafe.h"; sourceTree = "<group>"; };
+		DE7635281F17032D00EC26A5 /* NSString+WQSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQSafe.m"; sourceTree = "<group>"; };
+		DE7635291F17032D00EC26A5 /* NSString+WQSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WQSize.h"; sourceTree = "<group>"; };
+		DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQSize.m"; sourceTree = "<group>"; };
+		DE76352E1F17049700EC26A5 /* NSNumber+WQFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+WQFormat.h"; sourceTree = "<group>"; };
+		DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+WQFormat.m"; sourceTree = "<group>"; };
+		DE9601911F0D37580010942B /* UIButton+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WQSDWebImage.h"; sourceTree = "<group>"; };
+		DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WQSDWebImage.m"; sourceTree = "<group>"; };
 		DEFBEC631EE8FA34006FDADC /* UIImage+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WQHelp.h"; sourceTree = "<group>"; };
 		DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WQHelp.m"; sourceTree = "<group>"; };
 		F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 		DE0A017C1ED2BEDA0054DD17 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DE7635241F17032D00EC26A5 /* Category_String */,
 				DE0A017D1ED2BEDA0054DD17 /* Category_Date */,
 				DE0A018C1ED2BEDA0054DD17 /* Category_Foundation */,
 				DE0A01961ED2BEDA0054DD17 /* Category_Vendor */,
@@ -256,10 +275,10 @@
 			children = (
 				DEFBEC631EE8FA34006FDADC /* UIImage+WQHelp.h */,
 				DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */,
-				DE4D95F51ED574B900F9D641 /* NSString+WQHelp.h */,
-				DE4D95F61ED574B900F9D641 /* NSString+WQHelp.m */,
 				DE0A018D1ED2BEDA0054DD17 /* NSFileManager+WQPath.h */,
 				DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */,
+				DE76352E1F17049700EC26A5 /* NSNumber+WQFormat.h */,
+				DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */,
 			);
 			path = Category_Foundation;
 			sourceTree = "<group>";
@@ -288,10 +307,12 @@
 			children = (
 				DE0A01A11ED2BEDA0054DD17 /* WQDynamicObject.h */,
 				DE0A01A21ED2BEDA0054DD17 /* WQDynamicObject.m */,
-				DE0A01A31ED2BEDA0054DD17 /* WQError.h */,
-				DE0A01A41ED2BEDA0054DD17 /* WQError.m */,
 				DE66F5611EFCE4EF0066282A /* NSObject+PropertyRuntime.h */,
 				DE66F5621EFCE4EF0066282A /* NSObject+PropertyRuntime.m */,
+				DE5AFF3B1F0DE0A200A3EB92 /* WQProperty.h */,
+				DE5AFF3C1F0DE0A200A3EB92 /* WQProperty.m */,
+				DE35FA781F160D88008E9653 /* NSError+WQUtilities.h */,
+				DE35FA791F160D88008E9653 /* NSError+WQUtilities.m */,
 			);
 			path = BasicFoundation;
 			sourceTree = "<group>";
@@ -318,6 +339,8 @@
 				DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */,
 				DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */,
 				DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */,
+				DE9601911F0D37580010942B /* UIButton+WQSDWebImage.h */,
+				DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -353,8 +376,23 @@
 				DE66F5661EFCEC1A0066282A /* CoderObject.m */,
 				DE66F5671EFCEC1A0066282A /* Student.h */,
 				DE66F5681EFCEC1A0066282A /* Student.m */,
+				DE39F02D1F15BD880091EB05 /* SubCoderObject.h */,
+				DE39F02E1F15BD880091EB05 /* SubCoderObject.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DE7635241F17032D00EC26A5 /* Category_String */ = {
+			isa = PBXGroup;
+			children = (
+				DE7635251F17032D00EC26A5 /* NSString+WQHash.h */,
+				DE7635261F17032D00EC26A5 /* NSString+WQHash.m */,
+				DE7635271F17032D00EC26A5 /* NSString+WQSafe.h */,
+				DE7635281F17032D00EC26A5 /* NSString+WQSafe.m */,
+				DE7635291F17032D00EC26A5 /* NSString+WQSize.h */,
+				DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */,
+			);
+			path = Category_String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,25 +517,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5AFF3D1F0DE0A200A3EB92 /* WQProperty.m in Sources */,
 				DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */,
 				DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */,
 				DE0A01E41ED2BEDA0054DD17 /* NSFileManager+WQPath.m in Sources */,
-				DE0A01ED1ED2BEDA0054DD17 /* WQError.m in Sources */,
 				DE0A01E81ED2BEDA0054DD17 /* NSDate+Utilities.m in Sources */,
 				DE0A01691ED2BE490054DD17 /* ViewController.m in Sources */,
-				DE4D95F71ED574B900F9D641 /* NSString+WQHelp.m in Sources */,
 				DE0A01DD1ED2BEDA0054DD17 /* NSDate+WQFormat.m in Sources */,
 				DE66F5631EFCE4EF0066282A /* NSObject+PropertyRuntime.m in Sources */,
+				DE76352C1F17032D00EC26A5 /* NSString+WQSafe.m in Sources */,
 				DE0A01661ED2BE490054DD17 /* AppDelegate.m in Sources */,
 				DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */,
 				DE0A01DF1ED2BEDA0054DD17 /* NSDate+WQHelp.m in Sources */,
+				DE39F02F1F15BD880091EB05 /* SubCoderObject.m in Sources */,
 				DE0A01E11ED2BEDA0054DD17 /* NSString+WQDate.m in Sources */,
+				DE7635301F17049700EC26A5 /* NSNumber+WQFormat.m in Sources */,
 				DEFBEC651EE8FA34006FDADC /* UIImage+WQHelp.m in Sources */,
 				DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */,
+				DE76352D1F17032D00EC26A5 /* NSString+WQSize.m in Sources */,
+				DE76352B1F17032D00EC26A5 /* NSString+WQHash.m in Sources */,
 				DE0A01E31ED2BEDA0054DD17 /* WQDateFormater.m in Sources */,
 				DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */,
+				DE9601931F0D37580010942B /* UIButton+WQSDWebImage.m in Sources */,
 				DE66F56A1EFCEC1A0066282A /* Student.m in Sources */,
 				DE0A01631ED2BE490054DD17 /* main.m in Sources */,
+				DE35FA7A1F160D88008E9653 /* NSError+WQUtilities.m in Sources */,
 				DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */,
 				DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */,
 				DE66F5691EFCEC1A0066282A /* CoderObject.m in Sources */,

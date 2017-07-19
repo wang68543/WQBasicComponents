@@ -6,12 +6,9 @@
 //  Copyright © 2017年 WangQiang. All rights reserved.
 //
 
-#import "NSString+WQHelp.h"
+#import "NSString+WQHash.h"
 #import <CommonCrypto/CommonDigest.h>
-@implementation NSString (WQHelp)
--(CGSize)sizeWithMaxSize:(CGSize)maxSize font:(UIFont *)font{
-    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
-}
+@implementation NSString (WQHash)
 
 -(NSString *)md5String{
     const char *data = self.UTF8String;

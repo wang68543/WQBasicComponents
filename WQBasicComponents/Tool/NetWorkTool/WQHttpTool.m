@@ -36,6 +36,8 @@ static NSString * kBaseUrl = @"";
         client.requestSerializer.timeoutInterval = 60;
         //安全策略
         client.securityPolicy = [AFSecurityPolicy defaultPolicy];
+        //移除Json中值为Null的Key
+       ((AFJSONResponseSerializer*)client.responseSerializer).removesKeysWithNullValues = YES;
     });
     
     return client;

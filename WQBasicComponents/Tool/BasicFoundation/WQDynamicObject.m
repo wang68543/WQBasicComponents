@@ -34,61 +34,78 @@
     return [items copy];
 }
 
-+(NSArray *)classesWithArray:(NSArray *)array classInArray:(NSDictionary *)inArrayModels{
++(NSArray *)classesWithArray:(NSArray *)array recursiveInDict:(NSDictionary *)inDictModels{
     if(![array isKindOfClass:[NSArray class]] || array.count <= 0) return [NSArray array];
     NSMutableArray *items = [NSMutableArray array];
     for (NSDictionary *dic in array) {
-        WQDynamicObject *obj = [self classWithDict:dic classInDict:inArrayModels];
+        WQDynamicObject *obj = [self classWithDict:dic recursiveInDict:inDictModels];
         if(obj){
             [items addObject:obj];
         }
     }
     return items;
 }
-+(instancetype)classWithDict:(NSDictionary *)dict classInDict:(NSDictionary *)inDictModels{
-    if([dict isKindOfClass:[NSDictionary class]]){
++(instancetype)classWithDict:(NSDictionary *)dict recursiveInDict:(NSDictionary *)inDictModels{
+    if(![dict isKindOfClass:[NSDictionary class]]){
         return [[self alloc] init];
     }else{
-      return [[self alloc] initWithDict:dict classInDict:inDictModels];
+      return [[self alloc] initWithDict:dict recursiveInDict:inDictModels ];
     }
 }
 
 
--(instancetype)initWithDict:(NSDictionary *)dict classInDict:(NSDictionary *)inDictModels{
+-(instancetype)initWithDict:(NSDictionary *)dict recursiveInDict:(NSDictionary *)inDictModels{
     
     if(self = [super init]){
         __weak typeof(self) weakSelf = self;
-        __weak  NSArray *properties = [[self class] wq_properties];
+        NSArray *properties = [[self class] wq_propertyNames];
         [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:[NSDictionary class]]){
-                if([properties containsObject:key]){
-                    Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
-                    if(modelClass){
+            if([properties containsObject:key]){
+             Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
+                if(modelClass){
+                    if([obj isKindOfClass:[NSDictionary class]]){
                         [weakSelf setValue:[modelClass classWithDict:obj] forKey:key];
-                    }else{
-                        [weakSelf setValue:obj forUndefinedKey:key];
-                    }
-                }else{
-                    [weakSelf setValue:obj forUndefinedKey:key];
-                }
-            }else if([obj isKindOfClass:[NSArray class]]){
-                //
-                if([properties containsObject:key]){
-                    Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
-                    if(modelClass){
+                    }else if([obj isKindOfClass:[NSArray class]]){
                         [weakSelf setValue:[modelClass classesWithArray:obj] forKey:key];
                     }else{
-                        [weakSelf setValue:obj forUndefinedKey:key];
+                       [weakSelf setValue:obj forKey:key];
                     }
-                    
                 }else{
-                    [weakSelf setValue:obj forUndefinedKey:key];
+                     [weakSelf setValue:obj forKey:key];
                 }
-            }else if([properties containsObject:key] ){
-                [weakSelf setValue:obj forKey:key];
             }else{
                 [weakSelf setValue:obj forUndefinedKey:key];
             }
+            
+//            if([obj isKindOfClass:[NSDictionary class]]){
+//                if([properties containsObject:key]){
+//                    Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
+//                    if(modelClass){
+//                        [weakSelf setValue:[modelClass classWithDict:obj] forKey:key];
+//                    }else{
+//                        [weakSelf setValue:obj forUndefinedKey:key];
+//                    }
+//                }else{
+//                    [weakSelf setValue:obj forUndefinedKey:key];
+//                }
+//            }else if([obj isKindOfClass:[NSArray class]]){
+//                //
+//                if([properties containsObject:key]){
+//                    Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
+//                    if(modelClass){
+//                        [weakSelf setValue:[modelClass classesWithArray:obj] forKey:key];
+//                    }else{
+//                        [weakSelf setValue:obj forUndefinedKey:key];
+//                    }
+//                    
+//                }else{
+//                    [weakSelf setValue:obj forUndefinedKey:key];
+//                }
+//            }else if([properties containsObject:key] ){
+//                [weakSelf setValue:obj forKey:key];
+//            }else{
+//                [weakSelf setValue:obj forUndefinedKey:key];
+//            }
         }];
     }
     
@@ -185,7 +202,7 @@
     return [self isEualToInstance:anItem];
 }
 
--(void)dealloc{
-    NSLog(@"%@", [NSString stringWithFormat:@"%@ 销毁了",NSStringFromClass([self class])]);
-}
+//-(void)dealloc{
+//    NSLog(@"%@", [NSString stringWithFormat:@"%@ 销毁了",NSStringFromClass([self class])]);
+//}
 @end

@@ -35,5 +35,6 @@
 
 //压缩图片
 -(NSData *)compressImage;
-
+/** 将图片设置为向上 */
+- (UIImage *)fixOrientation;
 @end

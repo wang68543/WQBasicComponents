@@ -113,4 +113,9 @@
 + (NSArray <WQProperty *>*)wq_properties{
     return [WQProperty propertiesWithClass:[self class]];
 }
+
+//TODO: -- - 所有属性名
++ (NSArray <NSString *>*)wq_propertyNames{
+    return [[self wq_properties] valueForKeyPath:@"popertyName"];
+}
 @end

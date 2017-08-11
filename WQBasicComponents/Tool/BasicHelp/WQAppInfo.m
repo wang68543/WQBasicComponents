@@ -103,7 +103,7 @@ static NSString *kLastVersion = @"lastVersion";
 }
 //MARK: 设备令牌
 +(NSString *)appDeviceToken{
-   return  [WQCache userDefaultObjectWithKey:kLastVersion];
+   return  [WQCache userDefaultObjectWithKey:kDeviceToken];
 }
 //MARK: 设备与时间组合的唯一标识
 +(NSString *)appUUID_DateString{
@@ -120,7 +120,10 @@ static NSString *kLastVersion = @"lastVersion";
    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@"<" withString:@""];
     deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@">" withString:@""];
     deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [WQCache saveObject:deviceToken toUserDefault:kDeviceToken];
+    if(deviceToken.length > 0){
+        [WQCache saveObject:deviceToken toUserDefault:kDeviceToken];
+    }
+    
 }
 +(void)saveCurrentVersion{
     [WQCache saveObject:[self appVersion] toUserDefault:kLastVersion];

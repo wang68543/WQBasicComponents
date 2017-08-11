@@ -29,7 +29,9 @@
  */
 -(BOOL)isEualToInstance:(id)anInstance;
 
-/**  所有的属性名称 */
+/**  所有的属性 */
 + (NSArray <WQProperty *>*)wq_properties;
 
+/** 所有属性名 */
++ (NSArray <NSString *>*)wq_propertyNames;
 @end

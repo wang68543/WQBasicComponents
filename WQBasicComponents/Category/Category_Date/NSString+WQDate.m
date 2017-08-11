@@ -43,7 +43,10 @@
 -(NSDate *)formatyyyy_MM_ddToDate{
     return [self dateWithFormatString:@"yyyy-MM-dd"];
 }
-
+//MARK: --  HH:mm:ss
+-(NSDate *)formatHH3mm3ssToDate{
+    return [self dateWithFormatString:@"HH:mm:ss"];
+}
 //MARK: --  HH:mm
 -(NSDate *)formatHH3mmToDate{
     return [self dateWithFormatString:@"HH:mm"];

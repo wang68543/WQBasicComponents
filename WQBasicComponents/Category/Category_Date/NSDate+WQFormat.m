@@ -68,6 +68,11 @@
 -(NSString *)TOHH3mm{
     return [self formatDateWithFormat:@"HH:mm"];
 }
+
+// MARK:-- HH:mm:ss
+-(NSString *)TOHH3mm3ss{
+    return [self formatDateWithFormat:@"HH:mm:ss"];
+}
 -(NSString *)formatDateWithFormat:(NSString *)format{
     [WQDateFormater manager].dateFormat = format;
     return [[WQDateFormater manager] stringFromDate:self];

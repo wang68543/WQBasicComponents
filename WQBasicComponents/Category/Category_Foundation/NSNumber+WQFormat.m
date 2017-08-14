@@ -13,4 +13,8 @@
 -(NSString *)integerString{
     return [NSString stringWithFormat:@"%ld",(long)[self integerValue]];
 }
+//MARK: -- 将秒时间戳转换为日期
+-(NSDate *)formatSecondsToDate{
+    return [NSDate dateWithTimeIntervalSince1970:[self integerValue]];
+}
 @end

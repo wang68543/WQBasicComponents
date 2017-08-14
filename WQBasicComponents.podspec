@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
@@ -85,6 +85,6 @@ Pod::Spec.new do |s|
     end
   end
   s.dependency 'AFNetworking'
-  s.dependency 'SDWebImage'
+  # s.dependency 'SDWebImage'
 
 end

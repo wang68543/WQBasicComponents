@@ -48,6 +48,8 @@
 -(NSString *)TOMM2dd2;
 /** HH:mm */
 -(NSString *)TOHH3mm;
+/** HH:mm:ss */
+-(NSString *)TOHH3mm3ss;
 /** MM/dd */
 -(NSString *)TOMM4dd;
 

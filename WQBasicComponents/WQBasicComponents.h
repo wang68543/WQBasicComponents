@@ -22,8 +22,6 @@
 #import "NSString+WQDate.h"
 
 //TODO: 工具类
-#import "UIImageView+WQSDWebImage.h"
-#import "UIButton+WQSDWebImage.h"
 
 //TODO: 辅助
 #import "NSString+WQHash.h"

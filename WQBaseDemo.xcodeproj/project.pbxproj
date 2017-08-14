@@ -27,7 +27,6 @@
 		DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A71ED2BEDA0054DD17 /* RuntimeKit.m */; };
 		DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */; };
 		DE0A01F01ED2BEDA0054DD17 /* WQCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */; };
-		DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */; };
 		DE0A01F31ED2BEDA0054DD17 /* WQBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */; };
 		DE0A01F41ED2BEDA0054DD17 /* WQHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */; };
 		DE0A02841ED2C7060054DD17 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A02831ED2C7060054DD17 /* libsqlite3.tbd */; };
@@ -49,7 +48,6 @@
 		DE76352C1F17032D00EC26A5 /* NSString+WQSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7635281F17032D00EC26A5 /* NSString+WQSafe.m */; };
 		DE76352D1F17032D00EC26A5 /* NSString+WQSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */; };
 		DE7635301F17049700EC26A5 /* NSNumber+WQFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */; };
-		DE9601931F0D37580010942B /* UIButton+WQSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */; };
 		DEFBEC651EE8FA34006FDADC /* UIImage+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +89,6 @@
 		DE0A01A91ED2BEDA0054DD17 /* WQAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAppInfo.m; sourceTree = "<group>"; };
 		DE0A01AA1ED2BEDA0054DD17 /* WQCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCache.h; sourceTree = "<group>"; };
 		DE0A01AB1ED2BEDA0054DD17 /* WQCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCache.m; sourceTree = "<group>"; };
-		DE0A01B01ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WQSDWebImage.h"; sourceTree = "<group>"; };
-		DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WQSDWebImage.m"; sourceTree = "<group>"; };
 		DE0A01B21ED2BEDA0054DD17 /* WQBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQBaseAPI.h; sourceTree = "<group>"; };
 		DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQBaseAPI.m; sourceTree = "<group>"; };
 		DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHttpTool.h; sourceTree = "<group>"; };
@@ -129,8 +125,6 @@
 		DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQSize.m"; sourceTree = "<group>"; };
 		DE76352E1F17049700EC26A5 /* NSNumber+WQFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+WQFormat.h"; sourceTree = "<group>"; };
 		DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+WQFormat.m"; sourceTree = "<group>"; };
-		DE9601911F0D37580010942B /* UIButton+WQSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WQSDWebImage.h"; sourceTree = "<group>"; };
-		DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WQSDWebImage.m"; sourceTree = "<group>"; };
 		DEFBEC631EE8FA34006FDADC /* UIImage+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WQHelp.h"; sourceTree = "<group>"; };
 		DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WQHelp.m"; sourceTree = "<group>"; };
 		F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -333,14 +327,10 @@
 		DE0A01AF1ED2BEDA0054DD17 /* NetWorkTool */ = {
 			isa = PBXGroup;
 			children = (
-				DE0A01B01ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.h */,
-				DE0A01B11ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m */,
 				DE0A01B21ED2BEDA0054DD17 /* WQBaseAPI.h */,
 				DE0A01B31ED2BEDA0054DD17 /* WQBaseAPI.m */,
 				DE0A01B41ED2BEDA0054DD17 /* WQHttpTool.h */,
 				DE0A01B51ED2BEDA0054DD17 /* WQHttpTool.m */,
-				DE9601911F0D37580010942B /* UIButton+WQSDWebImage.h */,
-				DE9601921F0D37580010942B /* UIButton+WQSDWebImage.m */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -538,12 +528,10 @@
 				DE76352B1F17032D00EC26A5 /* NSString+WQHash.m in Sources */,
 				DE0A01E31ED2BEDA0054DD17 /* WQDateFormater.m in Sources */,
 				DE0A01EF1ED2BEDA0054DD17 /* WQAppInfo.m in Sources */,
-				DE9601931F0D37580010942B /* UIButton+WQSDWebImage.m in Sources */,
 				DE66F56A1EFCEC1A0066282A /* Student.m in Sources */,
 				DE0A01631ED2BE490054DD17 /* main.m in Sources */,
 				DE35FA7A1F160D88008E9653 /* NSError+WQUtilities.m in Sources */,
 				DE0A01EC1ED2BEDA0054DD17 /* WQDynamicObject.m in Sources */,
-				DE0A01F21ED2BEDA0054DD17 /* UIImageView+WQSDWebImage.m in Sources */,
 				DE66F5691EFCEC1A0066282A /* CoderObject.m in Sources */,
 				DE0A01E01ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m in Sources */,
 				DE0A01DE1ED2BEDA0054DD17 /* NSDate+WQHandle.m in Sources */,

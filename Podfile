@@ -3,5 +3,5 @@
 
 target 'WQBaseDemo' do
   pod 'AFNetworking'
-  pod 'SDWebImage'
+#  pod 'SDWebImage'
 end

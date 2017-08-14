@@ -12,7 +12,7 @@
 
 
 +(NSString *)cacheName:(NSString *)name flag:(NSString *)flag{
-    return [NSString stringWithFormat:@"%@-%@",name,flag];
+    return [NSString stringWithFormat:@"%@_%@",name,flag];
 }
 +(void)cacheObject:(id)object name:(NSString *)name flag:(NSString *)flag{
     [self cacheObject:object name:[self cacheName:name flag:flag]];

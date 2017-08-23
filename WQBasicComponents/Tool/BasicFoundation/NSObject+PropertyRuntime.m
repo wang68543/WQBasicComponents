@@ -108,7 +108,6 @@
     }
     return [keyValues copy];
 }
-
 //TODO: 所有的属性名称
 + (NSArray <WQProperty *>*)wq_properties{
     return [WQProperty propertiesWithClass:[self class]];

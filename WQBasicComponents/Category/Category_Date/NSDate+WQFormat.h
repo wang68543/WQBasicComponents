@@ -25,13 +25,12 @@
 -(NSString *)TOM;
 
 
-/** 下划线表示-  2表示汉字  3表示:   4表示斜杠/ 其余的使用日期本身的本地化 00表示空格*/
+/**  下划线表示-   2表示汉字  3表示:   4表示斜杠/ 其余的使用日期本身的本地化 00表示空格 */
 /** yyyy-MM-dd HH:mm */
 -(NSString *)TOyyyy_MM_dd00HH3mm;
 /** yyyy-MM-dd HH:mm:ss */
 -(NSString *)TOyyyy_MM_dd00HH3mm3ss;
-/** yyyy-MM-dd 00:00:00 */
--(NSString *)TOyyyy_MM_ddClear00HH3mm3ss;
+
 /** MM-dd HH:mm */
 -(NSString *)TOMM_dd00HH3mm;
 /** MM月dd日 HH:mm */
@@ -52,5 +51,4 @@
 -(NSString *)TOHH3mm3ss;
 /** MM/dd */
 -(NSString *)TOMM4dd;
-
 @end

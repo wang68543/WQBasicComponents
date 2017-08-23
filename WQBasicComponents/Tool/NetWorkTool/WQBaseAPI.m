@@ -9,10 +9,10 @@
 #import "WQBaseAPI.h"
 #import "WQHttpTool.h"
 #import "WQAppInfo.h"
-#import "UIImage+WQHelp.h"
 
 @implementation WQBaseAPI
 +(void)POST:(NSString *)url params:(NSDictionary *)params response:(WQResponse)res{
+    
     [WQHttpTool postWithPath:url params:params success:^(NSURLResponse *reponse, id json) {
         !res?:res(nil,json);
     } failure:^(NSURLResponse *reponse, NSError *error) {
@@ -29,7 +29,7 @@
 
 +(void)uploadImage:(NSString *)url params:(NSDictionary *)params image:(UIImage *)image response:(WQResponse)res{
     NSDictionary *fileParams = @{kName:@"uploadFile",kFileName:[WQAppInfo appUUID_DateString],kMimeType:@"image/png"};
-    [WQHttpTool postDataWithURL:url params:params fileParams:fileParams fileData:[image compressImageToKb:100] progress:NULL success:^(NSURLResponse *reponse, id json) {
+    [WQHttpTool postDataWithURL:url params:params fileParams:fileParams fileData:UIImagePNGRepresentation(image) progress:NULL success:^(NSURLResponse *reponse, id json) {
         !res?:res(nil,json);
     } failure:^(NSURLResponse *reponse, NSError *error) {
         !res?:res(error,nil);

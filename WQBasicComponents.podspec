@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
@@ -80,7 +80,6 @@ Pod::Spec.new do |s|
     end
     ss.subspec 'NetWorkTool' do |sss|
       sss.dependency 'WQBasicComponents/Tool/BasicHelp'
-      sss.dependency 'WQBasicComponents/Category/Category_Foundation'
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
     end
   end

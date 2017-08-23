@@ -36,10 +36,14 @@
 -(NSString *)TOyyyy_MM_dd00HH3mm3ss{
     return [self formatDateWithFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
-// MARK:-- yyyy-MM-dd 00:00:00
--(NSString *)TOyyyy_MM_ddClear00HH3mm3ss{
-    return [self formatDateWithFormat:@"yyyy-MM-dd 00:00:00"];
-}
+//// MARK:-- yyyy-MM-dd 00:00:00
+//-(NSString *)TOyyyy_MM_dd0000300300{
+//    return [self formatDateWithFormat:@"yyyy-MM-dd 00:00:00"];
+//}
+///** yyyy-MM-dd 24:00:00 */
+//-(NSString *)TOyyyy_MM_dd0024300300{
+//    return [self formatDateWithFormat:@"yyyy-MM-dd 24:00:00"];
+//}
 // MARK:-- MM月dd日HH:mm
 -(NSString *)TOMM2dd2HH3mm{
     return [self formatDateWithFormat:@"MM月dd日HH:mm"];

@@ -27,7 +27,7 @@ static WQAppLanguage kLanguage_;
 +(WQAppLanguage)appLanguage{
     if(!kLanguage_){
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSArray *languages = [defaults objectForKey : @"AppleLanguages" ];
+        NSArray *languages = [defaults objectForKey : @"AppleLanguages"];
         // 获得当前iPhone使用的语言
         NSString* currentLanguage = [languages objectAtIndex:0];
         if([currentLanguage isEqualToString:@"en-US"]){

@@ -11,6 +11,7 @@
 #import "NSObject+PropertyRuntime.h"
 #import "Student.h"
 #import "SubCoderObject.h"
+#import "NSDate+WQHelp.h"
 
 @interface ViewController ()
 
@@ -32,7 +33,7 @@
 //      SubCoderObject *copyObject = [NSKeyedUnarchiver unarchiveObjectWithFile:[cacheDirectory stringByAppendingPathComponent:@"test"]];
     SubCoderObject *copyObject = [oneObject wq_copyInstance];
     
-    NSLog(@"%f",copyObject.wqPoint.x);
+    NSLog(@"%f===%f",copyObject.wqPoint.x,kOneMinuteAtSeconds);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

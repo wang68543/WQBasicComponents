@@ -11,8 +11,8 @@
 
 #import "AFNetworking.h"
 
-//static NSString * kBaseUrl = @"http://120.77.174.130:8080/jingtong/appapi/appapi.htmls";
-static NSString * kBaseUrl = @"";
+static NSString * kBaseURL = @"";
+
 @interface AFHttpClient : AFHTTPSessionManager
 
 + (instancetype)sharedClient;
@@ -29,7 +29,7 @@ static NSString * kBaseUrl = @"";
         
         NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         
-        client = [[AFHttpClient alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrl] sessionConfiguration:configuration];
+        client = [[AFHttpClient alloc] initWithBaseURL:[NSURL URLWithString:kBaseURL] sessionConfiguration:configuration];
         //接收参数类型
         client.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif", nil];
         //设置超时时间
@@ -49,11 +49,12 @@ static NSString * kBaseUrl = @"";
 NSString *const kFileName = @"kUploadFileName";
 NSString *const kName = @"kUploadName";
 NSString *const kMimeType = @"kUploadMimeType";
-
++(void)configBaseURL:(NSString *)baseURL{
+    kBaseURL = baseURL;
+}
 +(void)getWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
     //获取完整的url路径
-    NSString * url = [kBaseUrl stringByAppendingPathComponent:path];
-    [[AFHttpClient sharedClient] GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[AFHttpClient sharedClient] GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -62,8 +63,8 @@ NSString *const kMimeType = @"kUploadMimeType";
 }
 +(void)postWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
     //获取完整的url路径
-    NSString * url = [kBaseUrl stringByAppendingPathComponent:path];
-    [[AFHttpClient sharedClient] POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    NSString * url = [kBaseURL stringByAppendingPathComponent:path];
+    [[AFHttpClient sharedClient] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -127,7 +128,7 @@ NSString *const kMimeType = @"kUploadMimeType";
                success:(HttpSuccessBlock)success
                failure:(HttpFailureBlock)failure{
     //获取完整的url路径
-    NSString * url = [kBaseUrl stringByAppendingPathComponent:urlString];
+//    NSString * url = [kBaseURL stringByAppendingPathComponent:urlString];
     NSString *fileName = [fileParams objectForKey:kFileName];
     NSString *name = [fileParams objectForKey:kName];
     NSString *mineType = [fileParams objectForKey:kMimeType];
@@ -135,7 +136,7 @@ NSString *const kMimeType = @"kUploadMimeType";
     NSAssert(fileName, @"上传文件名不能为空");
     NSAssert(name, @"服务器接收字段不能为空");
     NSAssert(mineType, @"文件mineType名不能为空");
-    [[AFHttpClient sharedClient] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[AFHttpClient sharedClient] POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mineType];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -158,7 +159,7 @@ NSString *const kMimeType = @"kUploadMimeType";
                     success:(HttpSuccessBlock)success
                     failure:(HttpFailureBlock)failure{
     //获取完整的url路径
-    NSString * urlString = [kBaseUrl stringByAppendingPathComponent:path];
+    NSString * urlString = [kBaseURL stringByAppendingPathComponent:path];
     
     //下载
     NSURL *URL = [NSURL URLWithString:urlString];

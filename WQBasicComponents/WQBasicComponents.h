@@ -31,9 +31,6 @@
 #import "NSNumber+WQFormat.h"
 
 
-
-#import "UIImage+WQHelp.h"
-
 //TODO: 其他
 #import "WQCache.h"
 

@@ -48,7 +48,6 @@
 		DE76352C1F17032D00EC26A5 /* NSString+WQSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7635281F17032D00EC26A5 /* NSString+WQSafe.m */; };
 		DE76352D1F17032D00EC26A5 /* NSString+WQSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */; };
 		DE7635301F17049700EC26A5 /* NSNumber+WQFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */; };
-		DEFBEC651EE8FA34006FDADC /* UIImage+WQHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,8 +124,6 @@
 		DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQSize.m"; sourceTree = "<group>"; };
 		DE76352E1F17049700EC26A5 /* NSNumber+WQFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+WQFormat.h"; sourceTree = "<group>"; };
 		DE76352F1F17049700EC26A5 /* NSNumber+WQFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+WQFormat.m"; sourceTree = "<group>"; };
-		DEFBEC631EE8FA34006FDADC /* UIImage+WQHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WQHelp.h"; sourceTree = "<group>"; };
-		DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WQHelp.m"; sourceTree = "<group>"; };
 		F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,8 +264,6 @@
 		DE0A018C1ED2BEDA0054DD17 /* Category_Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				DEFBEC631EE8FA34006FDADC /* UIImage+WQHelp.h */,
-				DEFBEC641EE8FA34006FDADC /* UIImage+WQHelp.m */,
 				DE0A018D1ED2BEDA0054DD17 /* NSFileManager+WQPath.h */,
 				DE0A018E1ED2BEDA0054DD17 /* NSFileManager+WQPath.m */,
 				DE76352E1F17049700EC26A5 /* NSNumber+WQFormat.h */,
@@ -522,7 +517,6 @@
 				DE39F02F1F15BD880091EB05 /* SubCoderObject.m in Sources */,
 				DE0A01E11ED2BEDA0054DD17 /* NSString+WQDate.m in Sources */,
 				DE7635301F17049700EC26A5 /* NSNumber+WQFormat.m in Sources */,
-				DEFBEC651EE8FA34006FDADC /* UIImage+WQHelp.m in Sources */,
 				DE0A01EE1ED2BEDA0054DD17 /* RuntimeKit.m in Sources */,
 				DE76352D1F17032D00EC26A5 /* NSString+WQSize.m in Sources */,
 				DE76352B1F17032D00EC26A5 /* NSString+WQHash.m in Sources */,
@@ -656,30 +650,18 @@
 			baseConfigurationReference = F27D1777CD2ABD65FC3BDA35 /* Pods-WQBaseDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/alipaySdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/AliPaySDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
-					"\"$(SRCROOT)/WQBasicComponents/PaySDK\"",
-					"\"$(SRCROOT)/WQBasicComponents/PaySDK/AliPaySDK\"",
 				);
 				INFOPLIST_FILE = WQBaseDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WQBasicComponents/Tool/VoiceTool/amrwapper",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/alipaySdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/WeiXinSdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/AliPaySDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = WQ.WQBaseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -690,30 +672,18 @@
 			baseConfigurationReference = 1CD1B01262C366C99BF48CAB /* Pods-WQBaseDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/alipaySdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/AliPaySDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
-					"\"$(SRCROOT)/WQBasicComponents/PaySDK\"",
-					"\"$(SRCROOT)/WQBasicComponents/PaySDK/AliPaySDK\"",
 				);
 				INFOPLIST_FILE = WQBaseDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/WQBasicComponents/Tool/VoiceTool/amrwapper",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/alipaySdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/WeiXinSdk",
-					"$(PROJECT_DIR)/WQBasicComponents/PaySDK/AliPaySDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = WQ.WQBaseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

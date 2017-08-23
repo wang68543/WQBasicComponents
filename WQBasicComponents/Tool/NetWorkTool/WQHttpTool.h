@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
+
 typedef void (^HttpSuccessBlock)(NSURLResponse *reponse, id json);
 typedef void (^HttpFailureBlock)(NSURLResponse *reponse ,NSError *error);
 typedef void (^HttpDownloadProgressBlock)(CGFloat progress);
 typedef void (^HttpUploadProgressBlock)(CGFloat progress);
 
 @interface WQHttpTool : NSObject
+/** 服务器地址 */
++(void)configBaseURL:(NSString *)baseURL;
 
 +(void)getWithPath:(NSString *)path
             params:(NSDictionary *)params

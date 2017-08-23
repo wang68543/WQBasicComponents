@@ -13,23 +13,39 @@
 @property (assign ,nonatomic,readonly) Ivar ivar;
 @end
 @implementation WQProperty
++(void)load{
+    
+}
+static NSString *const kProperties = @"wqStoreProperties";
+
 //TODO: 获取类的所有属性
 +(NSArray <WQProperty *> *)propertiesWithClass:(Class)cls{
-    NSMutableArray<WQProperty *> *properties = [NSMutableArray array];
-    unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList(cls, &count);
-    for (int i = 0; i<count; i++) {
-        Ivar ivar = ivars[i];
-        WQProperty *property = [WQProperty propertyWithVar:ivar];
-        property.srcClass = cls;
-        [properties addObject:property];
+    if (cls && ![self isClassFromFoundation: cls]) {
+        //这个属性包含了父类的属性 (就是重复包含 暂时没有好的办法解决)
+        NSArray *properties = objc_getAssociatedObject(cls, &kProperties);
+        if (properties.count <= 0) {
+            NSMutableArray<WQProperty *> *array = [NSMutableArray array];
+            unsigned int count = 0;
+            Ivar *ivars = class_copyIvarList(cls, &count);
+            for (int i = 0; i<count; i++) {
+                Ivar ivar = ivars[i];
+                WQProperty *property = [WQProperty propertyWithVar:ivar];
+                property.srcClass = cls;
+                [array addObject:property];
+            }
+            free(ivars);
+            
+            [array addObjectsFromArray:[self propertiesWithClass:[cls superclass]]];
+            properties = [array copy];
+            
+            objc_setAssociatedObject(cls, &kProperties,properties , OBJC_ASSOCIATION_RETAIN);
+        }
+        return properties;
+        
+    }else{
+        return [NSArray array];
     }
-    free(ivars);
-    Class superCls = [cls superclass];
-    if(![self isClassFromFoundation: superCls]){
-        [properties addObjectsFromArray:[self propertiesWithClass:superCls]];
-    }
-    return properties;
+
 }
 
 +(instancetype)propertyWithVar:(Ivar)var{

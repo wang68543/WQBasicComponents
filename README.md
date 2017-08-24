@@ -1,4 +1,5 @@
 # WQBasicComponents
+##### 添加一个合作者
 根据自己平常使用频率比较高的一些控件以及工具的封装,收集起来方便自己以后的方便使用
 ### 支持CocoaPods
     pod 'WQBasicComponents','~> '0.1.6'

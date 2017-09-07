@@ -123,12 +123,17 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
 -(NSArray *)dateWeekFirstAndLast{
     return [self dateAtBeginAndEndWithUnit:NSCalendarUnitWeekOfMonth];
 }
+//MARK: =========== 是否是同一天  ===========
+- (BOOL)isSameDayAsDate:(NSDate *)aDate{
+    NSDateComponents *components1 = [[self dateCalender] components:kUnit fromDate:self];
+    NSDateComponents *components2 = [[self dateCalender] components:kUnit fromDate:aDate];
+    return ((components1.day == components2.day)&&(components1.month == components2.month) && (components1.year == components2.year));
+}
 //TODO: -- -是否在同一个半小时之内
 -(BOOL)isSameHalfHourAsDate:(NSDate *)aDate{
     NSDateComponents *components1 = [[self dateCalender] components:kUnit fromDate:self];
     NSDateComponents *components2 = [[self dateCalender] components:kUnit fromDate:aDate];
-    return (labs(components1.minute - components2.minute)<= 30 &&(components1.hour == components2.hour)&&(components1.day == components2.day)&&(components1.month == components2.month) &&
-            (components1.year == components2.year));
+    return (labs(components1.minute - components2.minute)<= 30 &&(components1.hour == components2.hour)&&(components1.day == components2.day)&&(components1.month == components2.month) && (components1.year == components2.year));
     
 }
 -(NSArray *)lastDateWith:(NSCalendarUnit)unit{

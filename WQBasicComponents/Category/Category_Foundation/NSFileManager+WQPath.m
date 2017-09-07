@@ -78,10 +78,13 @@
     if([fileManager fileExistsAtPath:path isDirectory:NULL]){
         return nil;
     }else{
-        [self createPathIfNotExtist:[path stringByDeletingLastPathComponent]];
+//        [self createPathIfNotExtist:[path stringByDeletingLastPathComponent]];
         NSError *error ;
-        if(path.pathExtension.length <= 0){
-            [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+        
+        if(path.pathExtension.length > 0){
+            [fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:&error];
+        }else{
+           [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
         }
         return error;
     }

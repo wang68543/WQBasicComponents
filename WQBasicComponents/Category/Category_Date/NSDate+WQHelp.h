@@ -24,6 +24,8 @@
 - (NSTimeInterval)timeIntervalInMonth;
 /** 获取当前日期所在月的第一条和最后一天 */
 -(NSArray *)getFirstAndLastOnThisMonth;
+/** 是否是同一天 */
+- (BOOL)isSameDayAsDate:(NSDate *)aDate;
 /** 是否在同一个半小时之内 */
 -(BOOL)isSameHalfHourAsDate:(NSDate *)aDate;
 

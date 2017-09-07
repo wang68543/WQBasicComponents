@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
     end
   end
-  s.dependency 'AFNetworking'
+  s.dependency 'AFNetworking' ,'>= 3.1.0'
   # s.dependency 'SDWebImage'
 
 end

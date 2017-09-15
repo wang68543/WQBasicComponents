@@ -17,4 +17,8 @@
 -(NSDate *)formatSecondsToDate{
     return [NSDate dateWithTimeIntervalSince1970:[self integerValue]];
 }
+//MARK: =========== 转换为当前时区的时间 ===========
+//-(NSDate *)formatSecondsToLocalDate{
+//   return [NSDate dateWithTimeIntervalSince1970:[self integerValue] + [[NSTimeZone systemTimeZone] secondsFromGMT]];
+//}
 @end

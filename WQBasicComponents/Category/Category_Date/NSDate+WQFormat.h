@@ -4,12 +4,13 @@
 //
 //  Created by WangQiang on 2017/2/25.
 //  Copyright © 2017年 WangQiang. All rights reserved.
-//
+//  此日期分类处理的时间默认为UTC时间[即格林威治(0时区)时间]
 
 #import <Foundation/Foundation.h>
 
 @interface NSDate (WQFormat)
-//TODO: 每个NSDate日期都带有时区信息
+
+
 /** 根据日期NSDate后面的时区自动转换为对应当前时区的时间字符串 */
 -(NSString *)formatDateWithFormat:(NSString *)format;
 /**
@@ -45,6 +46,10 @@
 -(NSString *)TOyyyy2MM2;
 /** MM月dd日 */
 -(NSString *)TOMM2dd2;
+/** MM月 */
+-(NSString *)TOMM2;
+/** yyyy年 */
+-(NSString *)TOyyyy2;
 /** HH:mm */
 -(NSString *)TOHH3mm;
 /** HH:mm:ss */

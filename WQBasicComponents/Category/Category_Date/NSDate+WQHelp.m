@@ -11,7 +11,7 @@
 @implementation NSDate (WQHelp)
 //TODO: ===================日期几个基本函数的用法===================
 /**
- 获取当前日期以小单元时间为计量单位在大单元时间为内的小单元的数量
+ 获取一个小的单位在一个大的单位里面的序数 (比如今天在今年里面是处于第多少天)
  
  @param smaller 小单元时间
  @param larger 大单元时间
@@ -103,7 +103,22 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
     NSRange range = [[self dateCalender] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
     return range.length * kOneDayAtSeconds;
 }
-
+//MARK: =========== 计算两个日期之间相隔的天数 ===========
+-(NSInteger)timeIntervalDaysSinceDate:(NSDate *)otherDate{
+    return (NSInteger)ceil([self timeIntervalSinceDate:otherDate]/kOneDayAtSeconds);
+}
+//MARK: =========== 计算两个日期之间相隔的月数 ===========
+-(NSInteger)timeIntervalMonthsSinceDate:(NSDate *)otherDate{
+    NSDateComponents *maxComponents = [self dateComponents];
+    NSDateComponents *minComponents = [[self dateCalender] components:kUnit fromDate:otherDate];
+    return (maxComponents.year - minComponents.year)*12 + (maxComponents.month - minComponents.month);
+}
+//MARK: =========== 计算两个日期之间相隔的年数 ===========
+-(NSInteger)timeIntervalYearsSinceDate:(NSDate *)otherDate{
+    NSDateComponents *maxComponents = [self dateComponents];
+    NSDateComponents *minComponents = [[self dateCalender] components:kUnit fromDate:otherDate];
+    return maxComponents.year - minComponents.year;
+}
 //TODO: -- -返回一个单元单位内的起始时间跟结束时间
 -(NSArray *)dateAtBeginAndEndWithUnit:(NSCalendarUnit)unit{
     NSTimeInterval interval = 0;
@@ -116,6 +131,40 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
     }else{
         return [NSArray array];
     }
+}
+
+//MARK: ===========  月份的第一天 ===========
+- (NSDate *)dateAtStartOfMonth{
+    NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];
+    components.day = 1;
+    components.hour = 0; // Thanks Aleksey Kononov
+    components.minute = 0;
+    components.second = 0;
+    return [[self dateCalender] dateFromComponents:components];
+}
+//MARK: ===========  月份的最后一刻 ===========
+- (NSDate *)dateAtEndOfMonth{
+    return [[self dateAtStartOfMonth] dateByAddingTimeInterval:[self timeIntervalInMonth] -1];
+}
+//MARK: ===========  年份的第一天  ===========
+- (NSDate *)dateAtStartOfYear{
+    NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];
+    components.month = 1;
+    components.day = 1;
+    components.hour = 0; // Thanks Aleksey Kononov
+    components.minute = 0;
+    components.second = 0;
+    return [[self dateCalender] dateFromComponents:components];
+}
+//MARK: ===========  年份的最后一刻 ===========
+- (NSDate *)dateAtEndOfYear{
+    NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];
+    components.month = 12;
+    components.day = 31;
+    components.hour = 23; // Thanks Aleksey Kononov
+    components.minute = 59;
+    components.second = 59;
+    return [[self dateCalender] dateFromComponents:components];
 }
 /**
  *  当前日期所处的周一和周日

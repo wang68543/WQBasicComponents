@@ -14,6 +14,10 @@
 +(NSDate *)currentTimeZoneDate{
     return [[NSDate date] modifyDate];
 }
+//MARK: =========== 当前时区与零时区相差的秒数 ===========
++(NSTimeInterval)offsetTimeFromZeroZone{
+    return [[NSTimeZone systemTimeZone] secondsFromGMT];
+}
 -(NSDate *)modifyDate{
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     NSInteger interval = [zone secondsFromGMTForDate:self];
@@ -78,4 +82,5 @@
 -(NSString *)secondsAtString{
      return [NSString stringWithFormat:@"%.0f",self.timeIntervalSince1970];
 }
+
 @end

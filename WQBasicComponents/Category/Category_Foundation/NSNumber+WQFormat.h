@@ -12,6 +12,6 @@
 /** 转换为整型字符串 */
 -(NSString *)integerString;
 
-/** 将秒时间戳转换为日期 */
+/** 将秒时间戳转换为日期 (0时区的时间)*/
 -(NSDate *)formatSecondsToDate;
 @end

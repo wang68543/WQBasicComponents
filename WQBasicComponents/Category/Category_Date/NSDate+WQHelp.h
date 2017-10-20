@@ -23,8 +23,16 @@
 
 /** 获取当前日期所在月的第一条和最后一天 */
 -(NSArray *)getFirstAndLastOnThisMonth;
+
+/** 获取日期的组成部分 */
+- (NSDateComponents *)dateComponentsWithUnits:(NSCalendarUnit)units;
+
+/** 日期天的中午时刻 */
+- (NSDate *)dateAtMiddleOfDay;
 /** 月份的第一天 */
 - (NSDate *)dateAtStartOfMonth;
+/** 月份的15号的中午12点 */
+- (NSDate *)dateAtMiddleOfMonth;
 /** 月份的最后一天 */
 - (NSDate *)dateAtEndOfMonth;
 /** 年份的第一天 */
@@ -44,14 +52,15 @@
 
 
 
-
-
 /** 是否是同一天 */
 - (BOOL)isSameDayAsDate:(NSDate *)aDate;
 /** 是否在同一个半小时之内 */
 -(BOOL)isSameHalfHourAsDate:(NSDate *)aDate;
 
 
+
+
+//命名不规范API 将要废弃
 -(NSDate *)lastYearFisrtDay;
 -(NSDate *)lastYearLastDay;
 -(NSDate *)lastFirstMonth;

@@ -13,6 +13,8 @@ typedef NS_ENUM(NSInteger,WQAppLanguage) {
 };
 
 @interface WQAppInfo : NSObject
++(instancetype)sharedInstance;
+
 
 /** 屏幕高 */
 +(CGFloat)app_Height;
@@ -28,6 +30,8 @@ typedef NS_ENUM(NSInteger,WQAppLanguage) {
 +(NSString *)appLastVersion;
 /** 判断当前app是否是新版本 是的话就存储当前版本号*/
 +(BOOL)isNewVersion;
+/** 是否是第一次安装app */
++(BOOL)isFirstVersion;
 /** App数字版本号 */
 +(UInt32)appVersionNumber;
 /** App构建版本号 */
@@ -50,5 +54,5 @@ typedef NS_ENUM(NSInteger,WQAppLanguage) {
 //MARK: 动态保存信息
 +(void)saveDeviceToken:(NSData *)deviceData;
 /** 保存当前的版本号(大多用于新特性) */
-+(void)saveCurrentVersion;
++(void)saveCurrentVersion  OBJC_DEPRECATED("在isNewVersion ,isFirstVersion里面存储旧版本号");
 @end

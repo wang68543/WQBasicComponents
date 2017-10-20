@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <AFNetworking/AFNetworking.h>
 
 
 
@@ -16,7 +17,24 @@ typedef void (^HttpFailureBlock)(NSURLResponse *reponse ,NSError *error);
 typedef void (^HttpDownloadProgressBlock)(CGFloat progress);
 typedef void (^HttpUploadProgressBlock)(CGFloat progress);
 
+
+/** 网络变化通知 */
+UIKIT_EXTERN NSString *const kNetworkDidChangeNotification;
+static NSInteger const kNonNetworkErrorCode = -2000;//无网络
+
+@interface AFHttpClient : AFHTTPSessionManager
+
++ (instancetype)sharedClient;
+
+@end
+
+
 @interface WQHttpTool : NSObject
+/** 单例 */
++(instancetype)sharedInstance;
+/** 网络状态 */
+@property (assign  ,nonatomic,readonly) AFNetworkReachabilityStatus networkStatus;
+
 /** 服务器地址 */
 +(void)configBaseURL:(NSString *)baseURL;
 

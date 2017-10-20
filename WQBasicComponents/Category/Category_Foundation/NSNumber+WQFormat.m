@@ -17,6 +17,20 @@
 -(NSDate *)formatSecondsToDate{
     return [NSDate dateWithTimeIntervalSince1970:[self integerValue]];
 }
+//MARK: =========== 将分钟转为时分 ===========
+/** 将分钟转为 dd:HH:mm*/
+-(NSString *)timeDuration{
+    NSInteger minutes = [self integerValue];
+    if (minutes <= 60) {
+        return [NSString stringWithFormat:@"%ld分钟",minutes];
+    }else if (minutes <= 60.0 *24.0){
+        return [NSString stringWithFormat:@"%ld小时%ld分钟",minutes/60,minutes%60];
+    }else{
+        NSInteger day = minutes/(24*60);
+        minutes = minutes%(24*60);
+      return [NSString stringWithFormat:@"%ld天%ld小时%ld分钟",day,minutes/60,minutes%60];
+    }
+}
 //MARK: =========== 转换为当前时区的时间 ===========
 //-(NSDate *)formatSecondsToLocalDate{
 //   return [NSDate dateWithTimeIntervalSince1970:[self integerValue] + [[NSTimeZone systemTimeZone] secondsFromGMT]];

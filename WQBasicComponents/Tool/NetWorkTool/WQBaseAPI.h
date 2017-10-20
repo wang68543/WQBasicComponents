@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 typedef void(^WQResponse)(NSError *error,id results);
+
+
 @interface WQBaseAPI : NSObject
 +(void)POST:(NSString *)url
      params:(NSDictionary *)params

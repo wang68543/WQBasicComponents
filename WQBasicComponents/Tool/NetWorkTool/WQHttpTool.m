@@ -8,16 +8,11 @@
 
 #import "WQHttpTool.h"
 #import "WQAppInfo.h"
-
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 
 static NSString * kBaseURL = @"";
 
-@interface AFHttpClient : AFHTTPSessionManager
 
-+ (instancetype)sharedClient;
-
-@end
 
 @implementation AFHttpClient
 
@@ -45,16 +40,56 @@ static NSString * kBaseURL = @"";
 
 @end
 
+//MARK: =========== 网络请求业务逻辑 ===========
+@interface WQHttpTool ()
+@property (strong  ,nonatomic) AFHttpClient *networkClient;
+//@property (strong  ,nonatomic) AFNetworkReachabilityManager *networkManager;
+@end
+
 @implementation WQHttpTool
 NSString *const kFileName = @"kUploadFileName";
 NSString *const kName = @"kUploadName";
 NSString *const kMimeType = @"kUploadMimeType";
+
+NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
+
++(instancetype)sharedInstance{
+    static id _instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+//        _networkManager = [AFNetworkReachabilityManager manager];
+        _networkStatus = AFNetworkReachabilityStatusUnknown;
+        [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            _networkStatus = status;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkDidChangeNotification object:nil];
+        }];
+       [[AFNetworkReachabilityManager sharedManager]  startMonitoring];
+    }
+    return self;
+}
+-(AFHttpClient *)networkClient{
+    if (!_networkClient) {
+        _networkClient = [AFHttpClient sharedClient];
+    }
+    return _networkClient;
+}
 +(void)configBaseURL:(NSString *)baseURL{
     kBaseURL = baseURL;
 }
+
 +(void)getWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
+    if (![self validateNetworkAvailableWithFailure:failure]) return;
     //获取完整的url路径
-    [[AFHttpClient sharedClient] GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[[self sharedInstance] networkClient] GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -64,7 +99,8 @@ NSString *const kMimeType = @"kUploadMimeType";
 +(void)postWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
     //获取完整的url路径
 //    NSString * url = [kBaseURL stringByAppendingPathComponent:path];
-    [[AFHttpClient sharedClient] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+     if (![self validateNetworkAvailableWithFailure:failure]) return;
+    [[[self sharedInstance] networkClient] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -129,6 +165,8 @@ NSString *const kMimeType = @"kUploadMimeType";
                failure:(HttpFailureBlock)failure{
     //获取完整的url路径
 //    NSString * url = [kBaseURL stringByAppendingPathComponent:urlString];
+    
+     if (![self validateNetworkAvailableWithFailure:failure]) return;
     NSString *fileName = [fileParams objectForKey:kFileName];
     NSString *name = [fileParams objectForKey:kName];
     NSString *mineType = [fileParams objectForKey:kMimeType];
@@ -136,7 +174,7 @@ NSString *const kMimeType = @"kUploadMimeType";
     NSAssert(fileName, @"上传文件名不能为空");
     NSAssert(name, @"服务器接收字段不能为空");
     NSAssert(mineType, @"文件mineType名不能为空");
-    [[AFHttpClient sharedClient] POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[[self sharedInstance] networkClient] POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mineType];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -158,6 +196,8 @@ NSString *const kMimeType = @"kUploadMimeType";
                    progress:(HttpDownloadProgressBlock)progress
                     success:(HttpSuccessBlock)success
                     failure:(HttpFailureBlock)failure{
+    
+     if (![self validateNetworkAvailableWithFailure:failure]) return;
     //获取完整的url路径
     NSString * urlString = [kBaseURL stringByAppendingPathComponent:path];
     
@@ -166,7 +206,7 @@ NSString *const kMimeType = @"kUploadMimeType";
     
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSURLSessionDownloadTask *downloadTask = [[AFHttpClient sharedClient] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDownloadTask *downloadTask = [[[self sharedInstance] networkClient] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         
         progress(downloadProgress.fractionCompleted);
         
@@ -187,8 +227,21 @@ NSString *const kMimeType = @"kUploadMimeType";
         }
         
     }];
-    
     [downloadTask resume];
-    
+}
+
+//MARK: - -- 验证网络是否可用 若不可用直接失败状态回调
++(BOOL)validateNetworkAvailableWithFailure:(HttpFailureBlock)failure{
+    if ([[self sharedInstance] networkStatus] == AFNetworkReachabilityStatusNotReachable) {
+        if (failure) {
+            failure(nil,[self nonNetworkError]);
+        }
+        return NO;
+    }
+    return YES;
+}
+//MARK: - -- 网络不可用错误提示
++(NSError *)nonNetworkError{
+    return [NSError errorWithDomain:NSStringFromClass([self class]) code:kNonNetworkErrorCode userInfo:@{NSLocalizedDescriptionKey : @"您的网络有问题,\n请查看网络设置"}];
 }
 @end

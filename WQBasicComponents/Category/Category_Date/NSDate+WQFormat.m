@@ -32,7 +32,15 @@
 -(NSString *)TOyyyy_MM_dd00HH3mm{
     return [self formatDateWithFormat:@"yyyy-MM-dd HH:mm"];
 }
-// MARK:-- yyyy-MM-dd HH:mm:ss
+//MARK: =========== yyyyMMddHHmm ===========
+-(NSString *)TOyyyyMMddHHmm{
+    return [self formatDateWithFormat:@"yyyyMMddHHmm"];
+}
+//MARK: - -- MM-dd HH:mm
+-(NSString *)TOMM_dd00HH3mm{
+    return [self formatDateWithFormat:@"MM-dd HH:mm"];
+}
+//MARK: - -- yyyy-MM-dd HH:mm:ss
 -(NSString *)TOyyyy_MM_dd00HH3mm3ss{
     return [self formatDateWithFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
@@ -47,10 +55,6 @@
 // MARK:-- MM月dd日HH:mm
 -(NSString *)TOMM2dd2HH3mm{
     return [self formatDateWithFormat:@"MM月dd日HH:mm"];
-}
-// MARK:-- MM-dd HH:mm
--(NSString *)TOMM_dd00HH3mm{
-   return [self formatDateWithFormat:@"MM-dd HH:mm"];
 }
 // MARK:-- yyyy年MM月dd日
 -(NSString *)TOyyyy2MM2dd2{
@@ -85,6 +89,30 @@
 // MARK:-- HH:mm:ss
 -(NSString *)TOHH3mm3ss{
     return [self formatDateWithFormat:@"HH:mm:ss"];
+}
+
+//MARK: - -- 日期本地化
+-(NSString *)TOyyyy:(NSString *)yearUnit MM:(NSString *)monthUnit dd:(NSString *)dayUnit HH:(NSString *)hourUnit mm:(NSString *)minuteUnit ss:(NSString *)secondsUnit{
+    NSMutableString *formatString = [NSMutableString string];
+    if (yearUnit.length > 0) {
+        [formatString appendFormat:@"yyyy%@",yearUnit];
+    }
+    if (monthUnit.length > 0) {
+        [formatString appendFormat:@"MM%@",monthUnit];
+    }
+    if (dayUnit.length > 0) {
+        [formatString appendFormat:@"dd%@",dayUnit];
+    }
+    if (hourUnit.length > 0) {
+        [formatString appendFormat:@"HH%@",hourUnit];
+    }
+    if (minuteUnit.length > 0) {
+        [formatString appendFormat:@"mm%@",minuteUnit];
+    }
+    if (secondsUnit.length > 0) {
+        [formatString appendFormat:@"ss%@",secondsUnit];
+    }
+    return [self formatDateWithFormat:formatString];
 }
 -(NSString *)formatDateWithFormat:(NSString *)format{
     [WQDateFormater manager].dateFormat = format;

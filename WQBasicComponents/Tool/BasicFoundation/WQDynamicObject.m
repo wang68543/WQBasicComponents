@@ -1,5 +1,5 @@
 //
-//  NSCoderObject.m
+//  WQDynamicObject.m
 //  Guardian
 //
 //  Created by WangQiang on 16/7/30.

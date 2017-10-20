@@ -26,12 +26,26 @@
 -(NSString *)TOM;
 
 
+/**
+ 日期本地格式化 (有单位 才有对应的日期格式化串)
+
+ @param yearUnit 年单位
+ @param monthUnit 月单位
+ @param dayUnit 日单位
+ @param hourUnit 小时单位
+ @param minuteUnit 分钟单位
+ @param secondsUnit 秒单位
+ */
+-(NSString *)TOyyyy:(NSString *)yearUnit MM:(NSString *)monthUnit dd:(NSString *)dayUnit HH:(NSString *)hourUnit mm:(NSString *)minuteUnit ss:(NSString *)secondsUnit;
+
+
 /**  下划线表示-   2表示汉字  3表示:   4表示斜杠/ 其余的使用日期本身的本地化 00表示空格 */
 /** yyyy-MM-dd HH:mm */
 -(NSString *)TOyyyy_MM_dd00HH3mm;
+/** yyyyMMddHHmm */
+-(NSString *)TOyyyyMMddHHmm;
 /** yyyy-MM-dd HH:mm:ss */
 -(NSString *)TOyyyy_MM_dd00HH3mm3ss;
-
 /** MM-dd HH:mm */
 -(NSString *)TOMM_dd00HH3mm;
 /** MM月dd日 HH:mm */

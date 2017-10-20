@@ -14,4 +14,7 @@
 
 /** 将秒时间戳转换为日期 (0时区的时间)*/
 -(NSDate *)formatSecondsToDate;
+
+/** 将分钟转为 dd:HH:mm*/
+-(NSString *)timeDuration;
 @end

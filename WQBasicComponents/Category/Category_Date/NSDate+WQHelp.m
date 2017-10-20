@@ -43,8 +43,12 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
 - (NSCalendar *)dateCalender{
     return [NSCalendar currentCalendar];
 }
+//MARK: =========== 获取日期的组成部分 ===========
+- (NSDateComponents *)dateComponentsWithUnits:(NSCalendarUnit)units{
+    return [[self dateCalender] components:units fromDate:self];
+}
 -(NSDateComponents *)dateComponents{
-    return [[self dateCalender] components:kUnit fromDate:self];
+    return [self dateComponentsWithUnits:kUnit];
 }
 -(NSDate *)dateFromComponents:(NSDateComponents *)components{
     return  [[self dateCalender] dateFromComponents:components];
@@ -133,6 +137,24 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
     }
 }
 
+
+/** 日期天的中午时刻 */
+- (NSDate *)dateAtMiddleOfDay{
+    NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];
+    components.hour = 12; // Thanks Aleksey Kononov
+    components.minute = 0;
+    components.second = 0;
+    return [[self dateCalender] dateFromComponents:components];
+}
+/** 月份的15号的中午12点 */
+- (NSDate *)dateAtMiddleOfMonth{
+    NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];
+    components.day = 15;
+    components.hour = 12; // Thanks Aleksey Kononov
+    components.minute = 0;
+    components.second = 0;
+    return [[self dateCalender] dateFromComponents:components];
+}
 //MARK: ===========  月份的第一天 ===========
 - (NSDate *)dateAtStartOfMonth{
     NSDateComponents *components = [[self dateCalender] components:kUnit fromDate:self];

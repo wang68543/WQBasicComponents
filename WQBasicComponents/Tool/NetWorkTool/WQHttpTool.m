@@ -89,6 +89,7 @@ NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
 +(void)getWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure{
     if (![self validateNetworkAvailableWithFailure:failure]) return;
     //获取完整的url路径
+    if (![self validateNetworkAvailableWithFailure:failure]) return;
     [[[self sharedInstance] networkClient] GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

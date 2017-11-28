@@ -42,7 +42,7 @@
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 #define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 #define iOS9 ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0)
-#define iOS10 ([[UIDevice currentDevice].systemVersion doubleValue] >= 10.0)
-
+#define iOS10 @available(iOS 10.0, *)
+#define iOS11 @available(iOS 11.0, *)
 
 #endif /* WQConstans_h */

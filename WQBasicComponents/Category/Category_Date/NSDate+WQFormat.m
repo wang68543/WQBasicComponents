@@ -72,12 +72,15 @@
 -(NSString *)TOMM2dd2{
     return [self formatDateWithFormat:@"MM月dd日"];
 }
-
-/** MM月 */
+// MARK:-- MM
+-(NSString *)TOMM{
+    return [self formatDateWithFormat:@"MM"];
+}
+// MARK:-- MM月
 -(NSString *)TOMM2{
     return [self formatDateWithFormat:@"MM月"];
 }
-/** yyyy年 */
+// MARK:-- yyyy年 
 -(NSString *)TOyyyy2{
     return [self formatDateWithFormat:@"yyyy年"];
 }

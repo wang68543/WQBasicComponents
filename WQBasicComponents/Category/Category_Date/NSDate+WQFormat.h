@@ -62,6 +62,8 @@
 -(NSString *)TOyyyyMM;
 /** MM月dd日 */
 -(NSString *)TOMM2dd2;
+/** MM */
+-(NSString *)TOMM;
 /** MM月 */
 -(NSString *)TOMM2;
 /** yyyy年 */

@@ -127,9 +127,7 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
 -(NSArray *)dateAtBeginAndEndWithUnit:(NSCalendarUnit)unit{
     NSTimeInterval interval = 0;
     NSDate *beginDate;
-    //    [calendar setFirstWeekday:2];//设定周一为周首日
     BOOL ok = [[self dateCalender] rangeOfUnit:unit startDate:&beginDate interval:&interval forDate:self];
-    
     if (ok) {
         return @[beginDate,[beginDate dateByAddingTimeInterval:interval]];
     }else{
@@ -137,6 +135,14 @@ static NSInteger const kUnit = NSCalendarUnitDay | NSCalendarUnitYear |NSCalenda
     }
 }
 
+//MARK: - -- 星期的第一天
+- (NSDate *)dateAtStartOfWeek{
+    return [[self dateAtBeginAndEndWithUnit:NSCalendarUnitWeekOfYear] firstObject];
+}
+////MARK: - --  星期的最后一天
+- (NSDate *)dateAtEndOfWeek{
+    return [[self dateAtBeginAndEndWithUnit:NSCalendarUnitWeekOfYear] lastObject];
+}
 
 /** 日期天的中午时刻 */
 - (NSDate *)dateAtMiddleOfDay{

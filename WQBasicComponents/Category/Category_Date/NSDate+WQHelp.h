@@ -29,6 +29,10 @@
 
 /** 日期天的中午时刻 */
 - (NSDate *)dateAtMiddleOfDay;
+/** 星期的第一天 */
+- (NSDate *)dateAtStartOfWeek;
+/** 星期的最后一天 */
+- (NSDate *)dateAtEndOfWeek;
 /** 月份的第一天 */
 - (NSDate *)dateAtStartOfMonth;
 /** 月份的15号的中午12点 */

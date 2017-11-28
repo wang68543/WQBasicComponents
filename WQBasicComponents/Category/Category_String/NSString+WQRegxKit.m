@@ -9,6 +9,13 @@
 #import "NSString+WQRegxKit.h"
 
 @implementation NSString (WQRegxKit)
+/**
+ * ^ 跟 $表示被检索字符串的开头和结尾
+ *
+ * 匹配括号内包的经纬度\\([\\d\\.]+,[\\d\\.]+\\) 例:"(123.4545,123123.45)"
+ */
+
+
 /** 是否是11位纯数字 */
 + (BOOL)isChinaPhoneLengthPureInt:(NSString *)phoneNum{
     return  phoneNum.length == 11 && [self isPureInt:phoneNum];
@@ -81,6 +88,7 @@
 
 //MARK: =========== 校验18位的身份证号 ===========
 +(BOOL)validateUserCardID:(NSString *)userID{
+    //^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$ 也可简单校验
     /**中国大陆居民身份证号码中的地址码的数字编码规则为：
          第一、二位表示省（自治区、直辖市、特别行政区）。
          第三、四位表示市（地级市、自治州、盟及国家直辖市所属市辖区和县的汇总码）。其中，01-20，51-70表示省直辖市；21-50表示地区（自治州、盟）。
@@ -158,4 +166,6 @@
         }
     }
 }
+
+
 @end

@@ -22,6 +22,9 @@
  */
 -(instancetype)wq_copyInstance;
 
+/** 复制忽略 某些属性 */
+-(instancetype)wq_copyIngoreProperties:(NSArray *)properties;
+
 /**
  对比两个对象的各个属性是否相等
  

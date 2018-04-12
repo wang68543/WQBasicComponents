@@ -33,6 +33,18 @@
     - (NSRange)rangeOfUnit:(NSCalendarUnit)smaller inUnit:(NSCalendarUnit)larger forDate:(NSDate *)date;
  ***
  */
++ (NSDate *)dateAtBeginForWeek:(NSInteger)week inYear:(NSInteger)year{
+    NSDateComponents *componments = [[NSDateComponents alloc] init];
+    componments.year = year;
+    componments.month = 1;
+    componments.day = 1;
+    componments.hour = 0;
+    componments.minute = 0;
+    componments.second = 0;
+    NSDate * startDate =  [[NSCalendar currentCalendar] dateFromComponents:componments];
+    NSInteger component = [[NSCalendar currentCalendar] component:NSCalendarUnitWeekday fromDate:startDate];
+   return  [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitDay value:( week - 1) * 7  - (component - 1) toDate:startDate options:kNilOptions];
+}
 //TODO: ===================日期End===================
 
 

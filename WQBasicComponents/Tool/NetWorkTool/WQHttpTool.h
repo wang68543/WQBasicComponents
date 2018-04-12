@@ -34,7 +34,6 @@ static NSInteger const kNonNetworkErrorCode = -2000;//无网络
 +(instancetype)sharedInstance;
 /** 网络状态 */
 @property (assign  ,nonatomic,readonly) AFNetworkReachabilityStatus networkStatus;
-
 /** 服务器地址 */
 +(void)configBaseURL:(NSString *)baseURL;
 

@@ -10,20 +10,25 @@
 
 @implementation NSObject (PropertyRuntime)
 -(instancetype)wq_copyInstance{
+    return [self wq_copyIngoreProperties:nil];
+}
+- (instancetype)wq_copyIngoreProperties:(NSArray *)properties{
     Class cls = [self class];
     NSObject *copyObj = [cls new];
-     __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     NSArray<WQProperty *> *types =  [cls wq_properties];
     [types enumerateObjectsUsingBlock:^(WQProperty * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         WQVarType varType = obj.varType;
         NSString *key = obj.popertyName;
         id value = [weakSelf valueForKey:key];
         if(varType == WQVarCustomObject){
-            [copyObj setValue:[value wq_copyInstance] forKey:key];
+            if (!properties || ![properties containsObject:key]) {
+                [copyObj setValue:[value wq_copyInstance] forKey:key];
+            } 
         }else{
             [copyObj setValue:value forKey:key];
         }
-
+        
     }];
     return copyObj ;
 }

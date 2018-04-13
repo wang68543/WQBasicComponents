@@ -663,7 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WQBaseDemo/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -685,7 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = /Users/ggg/Desktop/Components/WQBaseDemo/WQBaseDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WQBaseDemo/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

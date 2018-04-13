@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0798D71FE119C700FD0732 /* NSString+WQURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0798D61FE119C700FD0732 /* NSString+WQURL.m */; };
 		2D15B17C1F9A0537007C36F8 /* NSString+WQRegxKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15B17B1F9A0537007C36F8 /* NSString+WQRegxKit.m */; };
 		5FF96E2F9F446AC6D5D96E60 /* libPods-WQBaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D83C88D71E647166B0F27 /* libPods-WQBaseDemo.a */; };
 		DE0A01631ED2BE490054DD17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0A01621ED2BE490054DD17 /* main.m */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		1CD1B01262C366C99BF48CAB /* Pods-WQBaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQBaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WQBaseDemo/Pods-WQBaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2D0798D51FE119C700FD0732 /* NSString+WQURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WQURL.h"; sourceTree = "<group>"; };
+		2D0798D61FE119C700FD0732 /* NSString+WQURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQURL.m"; sourceTree = "<group>"; };
 		2D15B17A1F9A0537007C36F8 /* NSString+WQRegxKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WQRegxKit.h"; sourceTree = "<group>"; };
 		2D15B17B1F9A0537007C36F8 /* NSString+WQRegxKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WQRegxKit.m"; sourceTree = "<group>"; };
 		D23D83C88D71E647166B0F27 /* libPods-WQBaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WQBaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +384,8 @@
 				DE76352A1F17032D00EC26A5 /* NSString+WQSize.m */,
 				2D15B17A1F9A0537007C36F8 /* NSString+WQRegxKit.h */,
 				2D15B17B1F9A0537007C36F8 /* NSString+WQRegxKit.m */,
+				2D0798D51FE119C700FD0732 /* NSString+WQURL.h */,
+				2D0798D61FE119C700FD0732 /* NSString+WQURL.m */,
 			);
 			path = Category_String;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				DE0A01E01ED2BEDA0054DD17 /* NSString+WQBridgeFormat.m in Sources */,
 				DE0A01DE1ED2BEDA0054DD17 /* NSDate+WQHandle.m in Sources */,
 				DE0A016F1ED2BE490054DD17 /* WQBaseDemo.xcdatamodeld in Sources */,
+				2D0798D71FE119C700FD0732 /* NSString+WQURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

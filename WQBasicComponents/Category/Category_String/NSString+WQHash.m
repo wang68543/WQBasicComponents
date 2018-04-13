@@ -84,9 +84,20 @@
     NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i ++) {
         // 小写 x 表示输出的是小写 MD5 ，大写 X 表示输出的是大写 MD5 @"XXXXXXXXXXXXXXXX"
+        [result appendFormat:@"%02X", buffer[i]];
+    }
+    return result;
+}
+/**小写 md5 加密 */
+-(NSString *)md5LowercaseString{
+    const char *data = self.UTF8String;
+    unsigned char buffer[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(data, (CC_LONG)strlen(data), buffer);
+    NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i ++) {
+        // 小写 x 表示输出的是小写 MD5 ，大写 X 表示输出的是大写 MD5 @"XXXXXXXXXXXXXXXX"
         [result appendFormat:@"%02x", buffer[i]];
     }
     return result;
-    
 }
 @end

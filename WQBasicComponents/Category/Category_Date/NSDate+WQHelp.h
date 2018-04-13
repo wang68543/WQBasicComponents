@@ -13,6 +13,12 @@
 #define kOneWeekAtSeconds 604800.0
 #define KOneYearAtSeconds 31556926.0
 @interface NSDate (WQHelp)
+
+
+/**
+ 根据年和第几周计算出这周的起始日期
+ */
++ (NSDate *)dateAtBeginForWeek:(NSInteger)week inYear:(NSInteger)year;
 /**
  返回一个起始时间跟结束时间
  

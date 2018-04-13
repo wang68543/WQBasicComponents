@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface NSString (WQHash)
-/** 89423e98 */
 /** DES加密 */
 -(NSString *)encryptUseDESInkey:(NSString *)key;
 /** DES解密 */
 - (NSString *)decryptUseDESInkey:(NSString*)key;
-/** md5加密 */
+/** md5加密 大写 */
 -(NSString *)md5String;
+/**小写 md5 加密 */
+-(NSString *)md5LowercaseString;
 
 @end

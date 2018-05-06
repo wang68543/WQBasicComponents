@@ -22,9 +22,9 @@
 -(NSString *)timeDuration{
     NSInteger minutes = [self integerValue];
     if (minutes <= 60) {
-        return [NSString stringWithFormat:@"%ld分钟",minutes];
+        return [NSString stringWithFormat:@"%zd分钟",minutes];
     }else if (minutes <= 60.0 *24.0){
-        return [NSString stringWithFormat:@"%ld小时%ld分钟",minutes/60,minutes%60];
+        return [NSString stringWithFormat:@"%zd小时%ld分钟",minutes/60,minutes%60];
     }else{
         NSInteger day = minutes/(24*60);
         minutes = minutes%(24*60);

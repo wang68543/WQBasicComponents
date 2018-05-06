@@ -2,6 +2,6 @@
 # platform :ios, ‘8.0’
 
 target 'WQBaseDemo' do
-  pod 'AFNetworking'
+  pod 'AFNetworking', :inhibit_warnings => true
 #  pod 'SDWebImage'
 end

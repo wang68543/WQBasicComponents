@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSFileManager+WQPath.h"
+
 
 typedef NS_ENUM(NSInteger,CacheDocumentType) {
     CacheToCachesDirectory = 0,//默认存储此文件夹

@@ -7,9 +7,8 @@
 //
 
 #import "WQCache.h"
-
+#import "NSFileManager+WQPath.h"
 @implementation WQCache
-
 
 +(NSString *)cacheName:(NSString *)name flag:(NSString *)flag{
     return [NSString stringWithFormat:@"%@_%@",name,flag];

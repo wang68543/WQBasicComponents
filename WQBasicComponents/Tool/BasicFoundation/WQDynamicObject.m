@@ -21,7 +21,9 @@
     if(![dict isKindOfClass:[NSDictionary class]]) return nil;
     return [[self alloc] initSelfWithDict:dict];
 }
-
++(NSDictionary *)recursiveInDict{
+    return [NSDictionary dictionary];
+}
 +(NSArray *)classesWithArray:(NSArray *)array{
     if(![array isKindOfClass:[NSArray class]] || array.count <= 0) return [NSArray array];
     NSMutableArray *items = [NSMutableArray array];
@@ -61,6 +63,7 @@
         NSArray *properties = [[self class] wq_propertyNames];
         [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             if([properties containsObject:key]){
+                //TODO: - NSClassFromString(clsString),clsString 必须 有implementation
              Class modelClass = NSClassFromString([inDictModels valueForKey:key]);
                 if(modelClass){
                     if([obj isKindOfClass:[NSDictionary class]]){
@@ -134,9 +137,28 @@
                 break;
             case WQVarBlock:
             case WQVarID:
-            case WQVarFoundationObject:
             case WQVarCustomObject:
                 [encoder encodeObject:value forKey:key];
+                break;
+            case WQVarFoundationObject:
+//                if ([value isKindOfClass:[NSArray class]] && [value count] > 0 && [[value firstObject] isKindOfClass:[NSDictionary class]]) {
+//                    NSDictionary *modelDict = [[self class] recursiveInDict];
+//                    Class modelCls = NSClassFromString([modelDict objectForKey:key]);
+//                    if (modelCls) {
+//                        NSMutableArray *values = [NSMutableArray array];
+//                        for (NSDictionary *dic in value) {
+//                           id model = [modelCls classWithDict:dic];
+//                            if (model) {
+//                                [values addObject:model];
+//                            }
+//                        }
+//                        [encoder encodeObject:<#(nullable id)#> forKey:<#(nonnull NSString *)#>]
+//                    } else {
+//                        [encoder encodeObject:value forKey:key];
+//                    }
+//                } else {
+                   [encoder encodeObject:value forKey:key];
+//                }
                 break;
             case WQVarStruct:
                 //FIXME: 结构体无法encodeObject
@@ -172,11 +194,33 @@
                     break;
                 case WQVarBlock:
                 case WQVarID:
-                case WQVarFoundationObject:
+              
                 case WQVarCustomObject:
                     [self setValue:[decoder decodeObjectForKey:key] forKey:key];
                     break;
-                    
+                case WQVarFoundationObject:
+                {
+                    id value = [decoder decodeObjectForKey:key];
+                    if ([value isKindOfClass:[NSArray class]] && [value count] > 0 && [[value firstObject] isKindOfClass:[NSDictionary class]]) {
+                        NSDictionary *modelDict = [[self class] recursiveInDict];
+                        Class modelCls = NSClassFromString([modelDict objectForKey:key]);
+                        if (modelCls) {
+                            NSMutableArray *values = [NSMutableArray array];
+                            for (NSDictionary *dic in value) {
+                                id model = [modelCls classWithDict:dic];
+                                if (model) {
+                                    [values addObject:model];
+                                }
+                            }
+                            [self setValue:[values copy] forKey:key];
+                        } else {
+                            [self setValue:value forKey:key];
+                        }
+                    }else {
+                        [self setValue:value forKey:key];
+                    }
+                }
+                    break;
                 case WQVarStruct:
                     //FIXME: 结构体无法decode
                 default://剩下的一些类型暂时不处理

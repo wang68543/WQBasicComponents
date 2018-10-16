@@ -68,8 +68,9 @@ NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
     if (self) {
 //        _networkManager = [AFNetworkReachabilityManager manager];
         _networkStatus = AFNetworkReachabilityStatusUnknown;
+//        __weak typeof(self) weakSelf = self;
         [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            _networkStatus = status;
+            self->_networkStatus = status;
             [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkDidChangeNotification object:nil];
         }];
        [[AFNetworkReachabilityManager sharedManager]  startMonitoring];

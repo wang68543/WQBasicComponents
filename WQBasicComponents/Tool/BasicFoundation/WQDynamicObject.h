@@ -14,6 +14,13 @@
 +(NSArray *)classesWithArray:(NSArray *)array;
 
 
+/**
+  属性中对应的子类型字典
+
+ @return 子类实现
+ */
++(NSDictionary *)recursiveInDict;
+
 
 +(NSArray *)classesWithArray:(NSArray *)array recursiveInDict:(NSDictionary *)inDictModels;
 /**

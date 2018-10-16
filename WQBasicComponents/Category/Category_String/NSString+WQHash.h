@@ -18,4 +18,6 @@
 /**小写 md5 加密 */
 -(NSString *)md5LowercaseString;
 
+/** SHA1加密方式  */
+-(NSString *)sha1;
 @end

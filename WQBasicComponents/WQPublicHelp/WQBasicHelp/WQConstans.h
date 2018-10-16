@@ -9,6 +9,9 @@
 #ifndef WQConstans_h
 #define WQConstans_h
 //TODO: 屏幕宽高
+#define STATUS_BAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
+#define NAIGATIONBAR_HEIGHT 44.0
+#define TOP_NAV_BAR_HEIGHT (STATUS_BAR_HEIGHT + NAIGATIONBAR_HEIGHT)
 #define APP_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define APP_HEIGHT [[UIScreen mainScreen] bounds].size.height
 

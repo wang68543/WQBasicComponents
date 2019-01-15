@@ -8,7 +8,6 @@
 
 #import "WQHttpTool.h"
 #import "WQAppInfo.h"
-//#import <AFNetworking/AFNetworkReachabilityManager.h>
 
 static NSString * kBaseURL = @"";
 

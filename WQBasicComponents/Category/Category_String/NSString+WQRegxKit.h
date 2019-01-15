@@ -25,6 +25,7 @@
 
 /*整型验证 MODIFIED BY HUANGHAO*/
 + (BOOL)isPureInt:(NSString *)pureString;
-
+/* 邮箱验证 **/
+-(BOOL)validateEmail;
 
 @end

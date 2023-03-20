@@ -90,7 +90,7 @@ NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
     if (![self validateNetworkAvailableWithFailure:failure]) return;
     //获取完整的url路径
     if (![self validateNetworkAvailableWithFailure:failure]) return;
-    [[[self sharedInstance] networkClient] GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[[self sharedInstance] networkClient] GET:path parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -101,7 +101,7 @@ NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
     //获取完整的url路径
 //    NSString * url = [kBaseURL stringByAppendingPathComponent:path];
      if (![self validateNetworkAvailableWithFailure:failure]) return;
-    [[[self sharedInstance] networkClient] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[[self sharedInstance] networkClient] POST:path parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         !success?:success(task.response,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         !failure?:failure(task.response,error);
@@ -175,7 +175,7 @@ NSString *const kNetworkDidChangeNotification = @"NetworkDidChangeNotification";
     NSAssert(fileName, @"上传文件名不能为空");
     NSAssert(name, @"服务器接收字段不能为空");
     NSAssert(mineType, @"文件mineType名不能为空");
-    [[[self sharedInstance] networkClient] POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[[self sharedInstance] networkClient] POST:urlString parameters:params headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mineType];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {

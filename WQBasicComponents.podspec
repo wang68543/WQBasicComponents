@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQBasicComponents"
-  s.version      = "0.1.9"
+  s.version      = "1.1.0"
   s.summary      = "基础组件(不涉及UI部分)"
 
   s.description  = <<-DESC
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/wang68543/WQBasicComponents.git", :tag => "#{s.version}" }
 
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   s.requires_arc = true
 
@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
       sss.source_files = 'WQBasicComponents/Tool/NetWorkTool/*.{h,m}'
     end
   end
-  s.dependency 'AFNetworking' ,'>= 3.1.0'
+  s.dependency 'AFNetworking' ,'>= 4.0'
   # s.dependency 'SDWebImage'
 
 end
